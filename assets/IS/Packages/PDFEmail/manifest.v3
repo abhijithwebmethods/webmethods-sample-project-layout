@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="enabled">yes</value>
+  <value name="system_package">no</value>
+  <value name="version">1.0</value>
+  <null name="startup_services"/>
+  <null name="shutdown_services"/>
+  <null name="replication_services"/>
+  <null name="requires"/>
+  <null name="listACL"/>
+  <value name="webappLoad">yes</value>
+  <value name="reloadWithDependentPackage">yes</value>
+  <value name="build"></value>
+  <null name="description"/>
+  <value name="created_date">08-11-2023 19:42:16 GMT</value>
+  <null name="extendedProperties"/>
+  <value name="name">PDFEmail</value>
+  <value name="time">2023-11-09 16:35:48 GMT</value>
+  <value name="jvm_version">11.0.16.1</value>
+  <value name="publisher">192.168.0.7</value>
+  <value name="patch_nums"></value>
+</Values>

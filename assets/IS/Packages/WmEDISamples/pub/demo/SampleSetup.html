@@ -1,0 +1,297 @@
+<html>
+
+	<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<LINK REL="stylesheet" TYPE="text/css" HREF="../../WmEDIINT/webMethods.css">
+		<title>Sample Setup</title>
+	</head>
+
+	<body>
+		<TABLE>
+            <tr>
+                <TD class="menusection-Server">Sample Setup</TD>
+            </tr>
+            <tr>
+				<td>
+        <table>
+          <tbody>
+            <tr>
+              <td colspan="4">
+               	<IMG border="0" src="../../WmEDIINT/images/blank.gif" width="10" height="10">
+              </td>
+            </tr>
+            <tr>
+              <td class="heading" colspan="4">
+        <b><font face="Arial">SUMMARY</font></b></td>
+            </tr>
+            <tr>
+              <td class="evenrow-l" align="middle" colspan="4">
+                        Use this sample to view the EDIINT message and
+                        MDN exchange process between two sample partners. To
+                        define the two partners, this sample uses two trading
+                        partner profiles. Because you can set values to use in
+                        the partner profiles, you can have the sample
+                        demonstrate an EDIINT message exchange that uses HTTP,
+                        HTTPS, SMTP (E-mail), or FTPS.
+                        <p>For use with this sample, the webMethods EDI
+                        Module provides sample certificates and private keys
+                        that the sample uses when exchanging EDIINT messages
+                        between the sample partners.</p>
+                        <p>To use the sample, you set up the profiles; then
+                        invoke the wm.EDIINT.sample:send service from the
+                        webMethods Developer to execute your EDIINT/MDN message
+                        exchange scenario. When you invoke the
+                        wm.EDIINT.sample:send service, for the <i>dataFileName</i>
+                        input variable, you specify a file to use as the payload
+                        of the message. The EDI Module provides two sample EDI
+                        payloads that you can select from the drop-down list for
+                        the <i>dataFileName</i> input variable. Alternatively,
+                        you can specify your own payload.</p>
+                        <p>For more information about exchanging documents
+                        using EDIINT, see information about EDIINT in the <i>webMethods
+                        EDI Module Concepts Guide</i> and <i>webMethods EDIINT
+                        Module User's Guide.</i></p>
+
+              </td>
+            </tr>
+            <tr>
+              <td colspan="4">
+               	<IMG border="0" src="../../WmEDIINT/images/blank.gif" width="10" height="10">
+              </td>
+            </tr>
+
+            <tr>
+              <td class="heading" colspan="4">
+        <b><font face="Arial">BEFORE YOU BEGIN</font></b></td>
+            </tr>
+            <tr>
+              <td class="evenrow-l" align="middle" colspan="4">
+                        <ol>
+                          <li>
+                            <p align="left">If you want to exchange messages that contain
+                            payloads that are EDI documents and you want to use
+                            the EDI Module to process the EDI documents, be sure
+                            you have installed the WmEDI and WmEDIforTN packages
+                            of the EDI Module.<br>
+                            <br>
+                            If you want to exchange messages that contain
+                          payloads that are EDI documents and do <i>not</i> want
+                          to use the EDI Module to process the EDI documents,
+                          when configuring EDIINT for the EDI Module, be sure to
+                          uncheck the <b>Submit Payload to TN</b> option.</p>
+                          <li>
+                            <p align="left">Set up your Trading Networks My Enterprise
+                            profile.</p>
+                          <li>
+                            <p align="left">If you will set up the sample sender or receiver
+                            to exchange EDIINT or MDN messages via SMTP
+                            (E-mail), you must enable inbound and outbound
+                            e-mail exchange. Similar for FTPS, you must enable FTPS Port.
+                            For guidelines, see the <i>webMethods Integration Server Administrator's Guide.</i></p>
+                          </li>
+                        </ol>
+              </td>
+            </tr>
+
+            <tr>
+              <td colspan="4">
+               	<IMG border="0" src="../../WmEDIINT/images/blank.gif" width="10" height="10">
+              </td>
+            </tr>
+            <tr>
+              <td class="heading" colspan="4">
+        <font face="Arial"><b>SET UP SAMPLE PROFILES</b></font></td>
+            </tr>
+            <tr>
+              <td class="evenrow-l" align="middle" colspan="4">
+                        To set up the two sample trading partners, fill
+                         in the fields below.  You can use the defaults listed, or specify your own values.
+                        After specifying the values, click <b>Setup Profiles</b>. The sample creates the
+                        profiles and automatically installs all.
+                  <tbody>
+                    <tr>
+                      <td colspan="4">
+                        <IMG border="0" src="../../WmEDIINT/images/blank.gif" width="10" height="10">
+                      </td>
+                    </tr>
+                    <FORM METHOD="POST" ACTION="/invoke/wm.EDIINT.sample/installDemo" target="">
+
+                    <tr>
+                      <td class="subheading" colspan="4">
+                        <b>Setup Specifications:</b>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="oddcol" colspan="2">
+                        Profile Fields
+                      </td>
+                      <td class="oddcol">
+                        Sender
+                      </td>
+                      <td class="oddcol">
+                        Receiver
+                      </td>
+                    </tr>
+                      <tr>
+                      <td class="evenrow" colspan="2">
+                        Corporation Name
+                      </td>
+                      <td class="evenrow-l">
+                      <input type="text" name="sender_name" size="30" value="EDIINT sample SENDER">
+                      </td>
+                      <td class="evenrow-l">
+                      <input type="text" name="receiver_name" size="30" value="EDIINT sample RECEIVER">
+                      </td>
+                      </tr>
+                    <tr>
+                      <td class="oddrow" rowspan="4">
+                        External ID
+                      </td>
+                      <td class="oddrow">
+                        DUNS
+                      </td>
+                      <td class="oddrow-l">
+                        <input type="text" name="sender_duns" size="30" value="123456789">
+                      </td>
+                      <td class="oddrow-l">
+                        <input type="text" name="receiver_duns" size="30" value="987654321">
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="oddrow">
+                        AS1
+                      </td>
+                      <td class="oddrow-l">
+                        <input type="text" name="sender_as1" size="30" value="sender.as1@company.com">
+                      </td>
+                      <td class="oddrow-l">
+                        <input type="text" name="receiver_as1" size="30" value="receiver.as1@company.com">
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="oddrow">
+                        AS2
+                      </td>
+                      <td class="oddrow-l">
+                        <input type="text" name="sender_as2" size="30" value="Sender AS2">
+                      </td>
+                      <td class="oddrow-l">
+                        <input type="text" name="receiver_as2" size="30" value="Receiver AS2">
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="oddrow">
+                        AS3
+                      </td>
+                      <td class="oddrow-l">
+                        <input type="text" name="sender_as3" size="30" value="Sender AS3">
+                      </td>
+                      <td class="oddrow-l">
+                        <input type="text" name="receiver_as3" size="30" value="Receiver AS3">
+                      </td>
+
+                    </tr>
+                    <tr>
+                      <td class="evenrow" colspan="2" nowrap>
+                        Host
+                      </td>
+                      <td class="evenrow-l">
+                      <input type="text" name="sender_host" size="30" value="localhost">
+                      </td>
+                      <td class="evenrow-l">
+                      <input type="text" name="receiver_host" size="30" value="localhost">
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="oddrow" colspan="2" nowrap>
+                        HTTP Port
+                      </td>
+                      <td class="oddrow-l">
+                        <input type="text" name="sender_http_port" size="30" value="5555">
+                      </td>
+                      <td class="oddrow-l">
+                        <input type="text" name="receiver_http_port" size="30" value="5555">
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="evenrow" colspan="2" nowrap>
+                        HTTP Location
+                      </td>
+                      <td class="evenrow-l">
+                      /invoke/wm.EDIINT/receive
+                      </td>
+                      <td class="evenrow-l">
+                      /invoke/wm.EDIINT/receive
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="oddrow" colspan="2" nowrap>
+                        FTPS Port
+                      </td>
+                      <td class="oddrow-l">
+                        <input type="text" name="sender_ftps_port" size="30" value="8021">
+                      </td>
+                      <td class="oddrow-l">
+                        <input type="text" name="receiver_ftps_port" size="30" value="8021">
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="evenrow" colspan="2" nowrap>
+                        User Name
+                      </td>
+                      <td class="evenrow-l">
+                        <input type="text" name="sender_username" size="30" value="Administrator">
+                      </td>
+                      <td class="evenrow-l">
+                        <input type="text" name="receiver_username" size="30" value="Administrator">
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="oddrow" colspan="2" nowrap>
+                        Password
+                      </td>
+                      <td class="oddrow-l">
+                      <input type="password" name="sender_password" size="30" value="manage">
+                      </td>
+                      <td class="oddrow-l">
+                      <input type="password" name="receiver_password" size="30" value="manage">
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="evenrow" colspan="2" nowrap>
+                        Certificate
+                      </td>
+                      <td class="evenrow-l">
+                        packages/WmEDIINTSamples/pub/demo/webMethodsCert/Partner1Cert.der
+                      </td>
+                      <td class="evenrow-l">
+                        packages/WmEDIINTSamples/pub/demo/webMethodsCert/Partner2Cert.der
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="oddrow" colspan="2" nowrap>
+                        Private Key
+                      </td>
+                      <td class="oddrow-l">
+                        packages/WmEDIINTSamples/pub/demo/webMethodsCert/Partner1PrivateKey.der
+                      </td>
+                      <td class="oddrow-l">
+                        packages/WmEDIINTSamples/pub/demo/webMethodsCert/Partner2PrivateKey.der
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="action" colspan="4">
+                        <input type="submit" value="Set Up Profiles">
+                      </td>
+                    </tr>
+                    </form>
+                  </tbody>
+        </table>
+					</td>
+				</tr>
+			</table>
+
+	</body>
+
+</html>

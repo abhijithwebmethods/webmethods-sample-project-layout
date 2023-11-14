@@ -1,0 +1,1208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<FLOW VERSION="3.0" CLEANUP="false">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<INVOKE TIMEOUT="" SERVICE="Tutorial.properties:getProperties" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_name">getPropertiesInput</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">false</value>
+    <list name="rec_fields">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">B2B_config_file</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">properties</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">1</value>
+        <value name="field_opt">false</value>
+      </record>
+    </list>
+    <value name="rec_closed">false</value>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">false</value>
+    <list name="rec_fields">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">ShipToAddress</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">false</value>
+        <list name="rec_fields">
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="field_name">@ShipToAccountNo</value>
+            <value name="field_type">string</value>
+            <value name="field_dim">0</value>
+            <value name="field_opt">true</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="field_name">@ShipToCustomerName</value>
+            <value name="field_type">string</value>
+            <value name="field_dim">0</value>
+            <value name="field_opt">true</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">record</value>
+            <value name="field_name">AddressRecord</value>
+            <value name="field_type">record</value>
+            <value name="field_dim">0</value>
+            <value name="field_opt">true</value>
+            <list name="rec_fields">
+              <record javaclass="com.wm.util.Values">
+                <value name="node_type">unknown</value>
+                <value name="field_name">Address1</value>
+                <value name="field_type">string</value>
+                <value name="field_dim">0</value>
+                <value name="field_opt">false</value>
+              </record>
+              <record javaclass="com.wm.util.Values">
+                <value name="node_type">unknown</value>
+                <value name="field_name">Address2</value>
+                <value name="field_type">string</value>
+                <value name="field_dim">0</value>
+                <value name="field_opt">true</value>
+              </record>
+              <record javaclass="com.wm.util.Values">
+                <value name="node_type">unknown</value>
+                <value name="field_name">Address3</value>
+                <value name="field_type">string</value>
+                <value name="field_dim">0</value>
+                <value name="field_opt">true</value>
+              </record>
+              <record javaclass="com.wm.util.Values">
+                <value name="node_type">unknown</value>
+                <value name="field_name">Address4</value>
+                <value name="field_type">string</value>
+                <value name="field_dim">0</value>
+                <value name="field_opt">true</value>
+              </record>
+              <record javaclass="com.wm.util.Values">
+                <value name="node_type">unknown</value>
+                <value name="field_name">City</value>
+                <value name="field_type">string</value>
+                <value name="field_dim">0</value>
+                <value name="field_opt">false</value>
+              </record>
+              <record javaclass="com.wm.util.Values">
+                <value name="node_type">unknown</value>
+                <value name="field_name">State</value>
+                <value name="field_type">string</value>
+                <value name="field_dim">0</value>
+                <value name="field_opt">false</value>
+              </record>
+              <record javaclass="com.wm.util.Values">
+                <value name="node_type">unknown</value>
+                <value name="field_name">PostalCode</value>
+                <value name="field_type">string</value>
+                <value name="field_dim">0</value>
+                <value name="field_opt">false</value>
+              </record>
+              <record javaclass="com.wm.util.Values">
+                <value name="node_type">unknown</value>
+                <value name="field_name">Country</value>
+                <value name="field_type">string</value>
+                <value name="field_dim">0</value>
+                <value name="field_opt">false</value>
+              </record>
+            </list>
+            <value name="rec_closed">true</value>
+          </record>
+        </list>
+        <value name="rec_closed">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">BillToAddress</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">false</value>
+        <list name="rec_fields">
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="field_name">@BillToAccountNo</value>
+            <value name="field_type">string</value>
+            <value name="field_dim">0</value>
+            <value name="field_opt">true</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="field_name">@BillToCustomerName</value>
+            <value name="field_type">string</value>
+            <value name="field_dim">0</value>
+            <value name="field_opt">true</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">record</value>
+            <value name="field_name">AddressRecord</value>
+            <value name="field_type">record</value>
+            <value name="field_dim">0</value>
+            <value name="field_opt">true</value>
+            <list name="rec_fields">
+              <record javaclass="com.wm.util.Values">
+                <value name="node_type">unknown</value>
+                <value name="field_name">Address1</value>
+                <value name="field_type">string</value>
+                <value name="field_dim">0</value>
+                <value name="field_opt">false</value>
+              </record>
+              <record javaclass="com.wm.util.Values">
+                <value name="node_type">unknown</value>
+                <value name="field_name">Address2</value>
+                <value name="field_type">string</value>
+                <value name="field_dim">0</value>
+                <value name="field_opt">true</value>
+              </record>
+              <record javaclass="com.wm.util.Values">
+                <value name="node_type">unknown</value>
+                <value name="field_name">Address3</value>
+                <value name="field_type">string</value>
+                <value name="field_dim">0</value>
+                <value name="field_opt">true</value>
+              </record>
+              <record javaclass="com.wm.util.Values">
+                <value name="node_type">unknown</value>
+                <value name="field_name">Address4</value>
+                <value name="field_type">string</value>
+                <value name="field_dim">0</value>
+                <value name="field_opt">true</value>
+              </record>
+              <record javaclass="com.wm.util.Values">
+                <value name="node_type">unknown</value>
+                <value name="field_name">City</value>
+                <value name="field_type">string</value>
+                <value name="field_dim">0</value>
+                <value name="field_opt">false</value>
+              </record>
+              <record javaclass="com.wm.util.Values">
+                <value name="node_type">unknown</value>
+                <value name="field_name">State</value>
+                <value name="field_type">string</value>
+                <value name="field_dim">0</value>
+                <value name="field_opt">false</value>
+              </record>
+              <record javaclass="com.wm.util.Values">
+                <value name="node_type">unknown</value>
+                <value name="field_name">PostalCode</value>
+                <value name="field_type">string</value>
+                <value name="field_dim">0</value>
+                <value name="field_opt">false</value>
+              </record>
+              <record javaclass="com.wm.util.Values">
+                <value name="node_type">unknown</value>
+                <value name="field_name">Country</value>
+                <value name="field_type">string</value>
+                <value name="field_dim">0</value>
+                <value name="field_opt">false</value>
+              </record>
+            </list>
+            <value name="rec_closed">true</value>
+          </record>
+        </list>
+        <value name="rec_closed">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <null name="field_usereditable"/>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="field_name">SupplierSiteID</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <null name="field_usereditable"/>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="field_name">DeliverToString1</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <null name="field_usereditable"/>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="field_name">DeliverToString2</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">false</value>
+      </record>
+    </list>
+    <value name="rec_closed">false</value>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPSET NAME="MapSet" OVERWRITE="true" VARIABLES="false" FIELD="/B2B_config_file;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">sample.properties</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_name">B2B_config_file</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="MapSet" OVERWRITE="true" VARIABLES="false" FIELD="/properties;1;1">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <array name="xml" type="value" depth="1">
+    <value>850N103</value>
+    <value>850N2N3</value>
+  </array>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_name">properties</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">1</value>
+    <value name="field_opt">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+</MAP>
+
+<MAP MODE="OUTPUT">
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">false</value>
+    <list name="rec_fields">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">ShipToAddress</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">false</value>
+        <list name="rec_fields">
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="field_name">@ShipToAccountNo</value>
+            <value name="field_type">string</value>
+            <value name="field_dim">0</value>
+            <value name="field_opt">true</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="field_name">@ShipToCustomerName</value>
+            <value name="field_type">string</value>
+            <value name="field_dim">0</value>
+            <value name="field_opt">true</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">record</value>
+            <value name="field_name">AddressRecord</value>
+            <value name="field_type">record</value>
+            <value name="field_dim">0</value>
+            <value name="field_opt">true</value>
+            <list name="rec_fields">
+              <record javaclass="com.wm.util.Values">
+                <value name="node_type">unknown</value>
+                <value name="field_name">Address1</value>
+                <value name="field_type">string</value>
+                <value name="field_dim">0</value>
+                <value name="field_opt">false</value>
+              </record>
+              <record javaclass="com.wm.util.Values">
+                <value name="node_type">unknown</value>
+                <value name="field_name">Address2</value>
+                <value name="field_type">string</value>
+                <value name="field_dim">0</value>
+                <value name="field_opt">true</value>
+              </record>
+              <record javaclass="com.wm.util.Values">
+                <value name="node_type">unknown</value>
+                <value name="field_name">Address3</value>
+                <value name="field_type">string</value>
+                <value name="field_dim">0</value>
+                <value name="field_opt">true</value>
+              </record>
+              <record javaclass="com.wm.util.Values">
+                <value name="node_type">unknown</value>
+                <value name="field_name">Address4</value>
+                <value name="field_type">string</value>
+                <value name="field_dim">0</value>
+                <value name="field_opt">true</value>
+              </record>
+              <record javaclass="com.wm.util.Values">
+                <value name="node_type">unknown</value>
+                <value name="field_name">City</value>
+                <value name="field_type">string</value>
+                <value name="field_dim">0</value>
+                <value name="field_opt">false</value>
+              </record>
+              <record javaclass="com.wm.util.Values">
+                <value name="node_type">unknown</value>
+                <value name="field_name">State</value>
+                <value name="field_type">string</value>
+                <value name="field_dim">0</value>
+                <value name="field_opt">false</value>
+              </record>
+              <record javaclass="com.wm.util.Values">
+                <value name="node_type">unknown</value>
+                <value name="field_name">PostalCode</value>
+                <value name="field_type">string</value>
+                <value name="field_dim">0</value>
+                <value name="field_opt">false</value>
+              </record>
+              <record javaclass="com.wm.util.Values">
+                <value name="node_type">unknown</value>
+                <value name="field_name">Country</value>
+                <value name="field_type">string</value>
+                <value name="field_dim">0</value>
+                <value name="field_opt">false</value>
+              </record>
+            </list>
+            <value name="rec_closed">true</value>
+          </record>
+        </list>
+        <value name="rec_closed">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">BillToAddress</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">false</value>
+        <list name="rec_fields">
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="field_name">@BillToAccountNo</value>
+            <value name="field_type">string</value>
+            <value name="field_dim">0</value>
+            <value name="field_opt">true</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="field_name">@BillToCustomerName</value>
+            <value name="field_type">string</value>
+            <value name="field_dim">0</value>
+            <value name="field_opt">true</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">record</value>
+            <value name="field_name">AddressRecord</value>
+            <value name="field_type">record</value>
+            <value name="field_dim">0</value>
+            <value name="field_opt">true</value>
+            <list name="rec_fields">
+              <record javaclass="com.wm.util.Values">
+                <value name="node_type">unknown</value>
+                <value name="field_name">Address1</value>
+                <value name="field_type">string</value>
+                <value name="field_dim">0</value>
+                <value name="field_opt">false</value>
+              </record>
+              <record javaclass="com.wm.util.Values">
+                <value name="node_type">unknown</value>
+                <value name="field_name">Address2</value>
+                <value name="field_type">string</value>
+                <value name="field_dim">0</value>
+                <value name="field_opt">true</value>
+              </record>
+              <record javaclass="com.wm.util.Values">
+                <value name="node_type">unknown</value>
+                <value name="field_name">Address3</value>
+                <value name="field_type">string</value>
+                <value name="field_dim">0</value>
+                <value name="field_opt">true</value>
+              </record>
+              <record javaclass="com.wm.util.Values">
+                <value name="node_type">unknown</value>
+                <value name="field_name">Address4</value>
+                <value name="field_type">string</value>
+                <value name="field_dim">0</value>
+                <value name="field_opt">true</value>
+              </record>
+              <record javaclass="com.wm.util.Values">
+                <value name="node_type">unknown</value>
+                <value name="field_name">City</value>
+                <value name="field_type">string</value>
+                <value name="field_dim">0</value>
+                <value name="field_opt">false</value>
+              </record>
+              <record javaclass="com.wm.util.Values">
+                <value name="node_type">unknown</value>
+                <value name="field_name">State</value>
+                <value name="field_type">string</value>
+                <value name="field_dim">0</value>
+                <value name="field_opt">false</value>
+              </record>
+              <record javaclass="com.wm.util.Values">
+                <value name="node_type">unknown</value>
+                <value name="field_name">PostalCode</value>
+                <value name="field_type">string</value>
+                <value name="field_dim">0</value>
+                <value name="field_opt">false</value>
+              </record>
+              <record javaclass="com.wm.util.Values">
+                <value name="node_type">unknown</value>
+                <value name="field_name">Country</value>
+                <value name="field_type">string</value>
+                <value name="field_dim">0</value>
+                <value name="field_opt">false</value>
+              </record>
+            </list>
+            <value name="rec_closed">true</value>
+          </record>
+        </list>
+        <value name="rec_closed">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <null name="field_usereditable"/>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="field_name">SupplierSiteID</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <null name="field_usereditable"/>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="field_name">DeliverToString1</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <null name="field_usereditable"/>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="field_name">DeliverToString2</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">B2B_config_file</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">properties</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">1</value>
+        <value name="field_opt">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">values</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">1</value>
+        <value name="field_opt">false</value>
+      </record>
+    </list>
+    <value name="rec_closed">false</value>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_name">getPropertiesOutput</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">false</value>
+    <list name="rec_fields">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">values</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">1</value>
+        <value name="field_opt">false</value>
+      </record>
+    </list>
+    <value name="rec_closed">false</value>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPDELETE NAME="MapDelete" FIELD="/B2B_config_file;1;0">
+</MAPDELETE>
+
+<MAPDELETE NAME="MapDelete" FIELD="/properties;1;1">
+</MAPDELETE>
+</MAP>
+</INVOKE>
+
+<BRANCH TIMEOUT="" SWITCH="/DeliverToString1">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<SEQUENCE NAME="/.+/" TIMEOUT="" EXIT-ON="FAILURE">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="STANDALONE">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAPCOPY NAME="MapCopy" FROM="/DeliverToString1;1;0" TO="/deliverToString;1;0">
+</MAPCOPY>
+</MAP>
+
+<BRANCH TIMEOUT="" SWITCH="/DeliverToString2">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP NAME="/.+/" MODE="STANDALONE">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAPSET NAME="MapSet" OVERWRITE="true" VARIABLES="true" FIELD="/deliverToString;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">%deliverToString% %DeliverToString2%</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">unknown</value>
+    <value name="field_name">deliverToString</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">false</value>
+    <array name="field_options" type="value" depth="1">
+    </array>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+</MAP>
+</BRANCH>
+</SEQUENCE>
+</BRANCH>
+
+<MAP MODE="STANDALONE">
+  <COMMENT>Map ShipToAddress to N1, N4</COMMENT>
+
+  <!-- nodes -->
+
+<MAPSET NAME="MapSet" OVERWRITE="true" VARIABLES="false" FIELD="/name;2;0/N101;2;0/code;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">ST</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">unknown</value>
+    <value name="field_name">code</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">false</value>
+    <array name="field_options" type="value" depth="1">
+    </array>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="MapSet" OVERWRITE="true" VARIABLES="true" FIELD="/name;2;0/N103;2;0/code;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">%values[0]%</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">unknown</value>
+    <value name="field_name">code</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">false</value>
+    <array name="field_options" type="value" depth="1">
+    </array>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPCOPY NAME="MapCopy" FROM="/deliverToString;1;0" TO="/name;2;0/N102;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="MapCopy" FROM="/ShipToAddress;2;0/AddressRecord;2;0/City;1;0" TO="/name;2;0/N4;2;0/N401;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="MapCopy" FROM="/ShipToAddress;2;0/AddressRecord;2;0/State;1;0" TO="/name;2;0/N4;2;0/N402;2;0/code;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="MapCopy" FROM="/ShipToAddress;2;0/AddressRecord;2;0/PostalCode;1;0" TO="/name;2;0/N4;2;0/N403;2;0/code;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="MapCopy" FROM="/ShipToAddress;2;0/AddressRecord;2;0/Country;1;0" TO="/name;2;0/N4;2;0/N404;2;0/code;1;0">
+</MAPCOPY>
+</MAP>
+
+<BRANCH TIMEOUT="" SWITCH="/ShipToAddress/@ShipToAccountNo">
+  <COMMENT>Check ShipToAddress/@ShipToAccountNo for null</COMMENT>
+
+  <!-- nodes -->
+
+<MAP NAME="$null" MODE="STANDALONE">
+  <COMMENT>If null, use 00 for N104</COMMENT>
+
+  <!-- nodes -->
+
+<MAPSET NAME="MapSet" OVERWRITE="true" VARIABLES="false" FIELD="/name;2;0/N104;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">00</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">unknown</value>
+    <value name="field_name">N104</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">false</value>
+    <array name="field_options" type="value" depth="1">
+    </array>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+</MAP>
+
+<MAP NAME="$default" MODE="STANDALONE">
+  <COMMENT>Otherwise, map ShipToAddress/@ShipToAccountNo to N104</COMMENT>
+
+  <!-- nodes -->
+
+<MAPCOPY NAME="MapCopy" FROM="/ShipToAddress;2;0/@ShipToAccountNo;1;0" TO="/name;2;0/N104;1;0">
+</MAPCOPY>
+</MAP>
+</BRANCH>
+
+<BRANCH TIMEOUT="" SWITCH="/ShipToAddress/@ShipToCustomerName">
+  <COMMENT>Check ShipToAddress/@ShipToCustomerName for null</COMMENT>
+
+  <!-- nodes -->
+
+<SEQUENCE NAME="$null" TIMEOUT="" EXIT-ON="FAILURE">
+  <COMMENT>If ShipToAddress/@ShipToCustomerName is null, map ShipToAddress/AddressRecord/Address1 and Address2</COMMENT>
+
+  <!-- nodes -->
+
+<BRANCH TIMEOUT="" SWITCH="/ShipToAddress/AddressRecord/Address2">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP NAME="$null" MODE="STANDALONE">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAPCOPY NAME="MapCopy" FROM="/ShipToAddress;2;0/AddressRecord;2;0/Address1;1;0" TO="/name;2;0/N2;2;0/N201;1;0">
+</MAPCOPY>
+</MAP>
+
+<MAP NAME="$default" MODE="STANDALONE">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAPCOPY NAME="MapCopy" FROM="/ShipToAddress;2;0/AddressRecord;2;0/Address1;1;0" TO="/name;2;0/N2;2;0/N201;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="MapCopy" FROM="/ShipToAddress;2;0/AddressRecord;2;0/Address2;1;0" TO="/name;2;0/N2;2;0/N202;1;0">
+</MAPCOPY>
+</MAP>
+</BRANCH>
+</SEQUENCE>
+
+<SEQUENCE NAME="$default" TIMEOUT="" EXIT-ON="FAILURE">
+  <COMMENT>Otherwise, map ShipToAddress/@ShipToCustomerName and concatenate Address1 and Address2</COMMENT>
+
+  <!-- nodes -->
+
+<BRANCH TIMEOUT="" SWITCH="/ShipToAddress/AddressRecord/Address2">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP NAME="$null" MODE="STANDALONE">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAPCOPY NAME="MapCopy" FROM="/ShipToAddress;2;0/@ShipToCustomerName;1;0" TO="/name;2;0/N2;2;0/N201;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="MapCopy" FROM="/ShipToAddress;2;0/AddressRecord;2;0/Address1;1;0" TO="/name;2;0/N2;2;0/N202;1;0">
+</MAPCOPY>
+</MAP>
+
+<MAP NAME="$default" MODE="STANDALONE">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAPCOPY NAME="MapCopy" FROM="/ShipToAddress;2;0/@ShipToCustomerName;1;0" TO="/name;2;0/N2;2;0/N201;1;0">
+</MAPCOPY>
+
+<MAPSET NAME="MapSet" OVERWRITE="true" VARIABLES="true" FIELD="/name;2;0/N2;2;0/N202;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">%ShipToAddress/AddressRecord/Address1% %ShipToAddress/AddressRecord/Address2%</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">unknown</value>
+    <value name="field_name">N202</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">false</value>
+    <array name="field_options" type="value" depth="1">
+    </array>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+</MAP>
+</BRANCH>
+</SEQUENCE>
+</BRANCH>
+
+<BRANCH TIMEOUT="" SWITCH="/ShipToAddress/AddressRecord/Address3">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP NAME="/.+/" MODE="STANDALONE">
+  <COMMENT>If ShipToAddress/AddressRecord/Address3 is not null, map N3 segment</COMMENT>
+
+  <!-- nodes -->
+
+<MAPCOPY NAME="MapCopy" FROM="/ShipToAddress;2;0/AddressRecord;2;0/Address3;1;0" TO="/name;2;0/N3;2;0/N301;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="MapCopy" FROM="/ShipToAddress;2;0/AddressRecord;2;0/Address4;1;0" TO="/name;2;0/N3;2;0/N302;1;0">
+</MAPCOPY>
+</MAP>
+</BRANCH>
+
+<INVOKE TIMEOUT="" SERVICE="Tutorial.XMLtoEDI:appendSegment" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+
+  <!-- nodes -->
+
+<MAPCOPY NAME="MapCopy" FROM="/name;2;0" TO="/record;2;0">
+</MAPCOPY>
+</MAP>
+
+<MAP MODE="OUTPUT">
+
+  <!-- nodes -->
+
+<MAPDELETE NAME="MapDelete" FIELD="/name;2;0">
+</MAPDELETE>
+
+<MAPDELETE NAME="MapDelete" FIELD="/record;2;0">
+</MAPDELETE>
+</MAP>
+</INVOKE>
+
+<MAP MODE="STANDALONE">
+  <COMMENT>Map BillToAddress to N1, N4</COMMENT>
+
+  <!-- nodes -->
+
+<MAPSET NAME="MapSet" OVERWRITE="true" VARIABLES="false" FIELD="/name;2;0/N101;2;0/code;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">BT</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">unknown</value>
+    <value name="field_name">code</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">false</value>
+    <array name="field_options" type="value" depth="1">
+    </array>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="MapSet" OVERWRITE="true" VARIABLES="true" FIELD="/name;2;0/N103;2;0/code;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">%values[0]%</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">unknown</value>
+    <value name="field_name">code</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">false</value>
+    <array name="field_options" type="value" depth="1">
+    </array>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPCOPY NAME="MapCopy" FROM="/deliverToString;1;0" TO="/name;2;0/N102;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="MapCopy" FROM="/BillToAddress;2;0/AddressRecord;2;0/City;1;0" TO="/name;2;0/N4;2;0/N401;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="MapCopy" FROM="/BillToAddress;2;0/AddressRecord;2;0/State;1;0" TO="/name;2;0/N4;2;0/N402;2;0/code;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="MapCopy" FROM="/BillToAddress;2;0/AddressRecord;2;0/PostalCode;1;0" TO="/name;2;0/N4;2;0/N403;2;0/code;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="MapCopy" FROM="/BillToAddress;2;0/AddressRecord;2;0/Country;1;0" TO="/name;2;0/N4;2;0/N404;2;0/code;1;0">
+</MAPCOPY>
+</MAP>
+
+<BRANCH TIMEOUT="" SWITCH="/BillToAddress/@BillToAccountNo">
+  <COMMENT>Check BillToAddress/@BillToAccountNo for null</COMMENT>
+
+  <!-- nodes -->
+
+<MAP NAME="$null" MODE="STANDALONE">
+  <COMMENT>If null, use 00 for N104</COMMENT>
+
+  <!-- nodes -->
+
+<MAPSET NAME="MapSet" OVERWRITE="true" VARIABLES="false" FIELD="/name;2;0/N104;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">00</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">unknown</value>
+    <value name="field_name">N104</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">false</value>
+    <array name="field_options" type="value" depth="1">
+    </array>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+</MAP>
+
+<MAP NAME="$default" MODE="STANDALONE">
+  <COMMENT>Otherwise, map BillToAddress/@BillToAccountNo to N104</COMMENT>
+
+  <!-- nodes -->
+
+<MAPCOPY NAME="MapCopy" FROM="/BillToAddress;2;0/@BillToAccountNo;1;0" TO="/name;2;0/N104;1;0">
+</MAPCOPY>
+</MAP>
+</BRANCH>
+
+<BRANCH TIMEOUT="" SWITCH="/BillToAddress/@BillToCustomerName">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<SEQUENCE NAME="$null" TIMEOUT="" EXIT-ON="FAILURE">
+  <COMMENT>If BillToAddress/@BillToCustomerName is null, map BillToAddress/AddressRecord/Address1 and Address2</COMMENT>
+
+  <!-- nodes -->
+
+<BRANCH TIMEOUT="" SWITCH="/BillToAddress/AddressRecord/Address2">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP NAME="$null" MODE="STANDALONE">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAPCOPY NAME="MapCopy" FROM="/BillToAddress;2;0/AddressRecord;2;0/Address1;1;0" TO="/name;2;0/N2;2;0/N201;1;0">
+</MAPCOPY>
+</MAP>
+
+<MAP NAME="$default" MODE="STANDALONE">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAPCOPY NAME="MapCopy" FROM="/BillToAddress;2;0/AddressRecord;2;0/Address1;1;0" TO="/name;2;0/N2;2;0/N201;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="MapCopy" FROM="/BillToAddress;2;0/AddressRecord;2;0/Address2;1;0" TO="/name;2;0/N2;2;0/N202;1;0">
+</MAPCOPY>
+</MAP>
+</BRANCH>
+</SEQUENCE>
+
+<SEQUENCE NAME="$default" TIMEOUT="" EXIT-ON="FAILURE">
+  <COMMENT>Otherwise, map BillToAddress/@BillToCustomerName and concatenate Address1 and Address2</COMMENT>
+
+  <!-- nodes -->
+
+<BRANCH TIMEOUT="" SWITCH="/BillToAddress/AddressRecord/Address2">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP NAME="$null" MODE="STANDALONE">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAPCOPY NAME="MapCopy" FROM="/BillToAddress;2;0/@BillToCustomerName;1;0" TO="/name;2;0/N2;2;0/N201;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="MapCopy" FROM="/BillToAddress;2;0/AddressRecord;2;0/Address1;1;0" TO="/name;2;0/N2;2;0/N202;1;0">
+</MAPCOPY>
+</MAP>
+
+<MAP NAME="$default" MODE="STANDALONE">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAPSET NAME="MapSet" OVERWRITE="true" VARIABLES="true" FIELD="/name;2;0/N2;2;0/N202;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">%BillToAddress/AddressRecord/Address1% %BillToAddress/AddressRecord/Address2%</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">unknown</value>
+    <value name="field_name">N202</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">false</value>
+    <array name="field_options" type="value" depth="1">
+    </array>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPCOPY NAME="MapCopy" FROM="/BillToAddress;2;0/@BillToCustomerName;1;0" TO="/name;2;0/N2;2;0/N201;1;0">
+</MAPCOPY>
+</MAP>
+</BRANCH>
+</SEQUENCE>
+</BRANCH>
+
+<BRANCH TIMEOUT="" SWITCH="/BillToAddress/AddressRecord/Address3">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP NAME="/.+/" MODE="STANDALONE">
+  <COMMENT>If BillToAddress/AddressRecord/Address3 is not null, map N3 segment</COMMENT>
+
+  <!-- nodes -->
+
+<MAPCOPY NAME="MapCopy" FROM="/BillToAddress;2;0/AddressRecord;2;0/Address3;1;0" TO="/name;2;0/N3;2;0/N301;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="MapCopy" FROM="/BillToAddress;2;0/AddressRecord;2;0/Address4;1;0" TO="/name;2;0/N3;2;0/N302;1;0">
+</MAPCOPY>
+</MAP>
+</BRANCH>
+
+<INVOKE TIMEOUT="" SERVICE="Tutorial.XMLtoEDI:appendSegment" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+
+  <!-- nodes -->
+
+<MAPCOPY NAME="MapCopy" FROM="/name;2;0" TO="/record;2;0">
+</MAPCOPY>
+</MAP>
+
+<MAP MODE="OUTPUT">
+
+  <!-- nodes -->
+
+<MAPDELETE NAME="MapDelete" FIELD="/name;2;0">
+</MAPDELETE>
+
+<MAPDELETE NAME="MapDelete" FIELD="/record;2;0">
+</MAPDELETE>
+</MAP>
+</INVOKE>
+
+<BRANCH TIMEOUT="" SWITCH="/SupplierSiteID">
+  <COMMENT>Map Ship From info to N1</COMMENT>
+
+  <!-- nodes -->
+
+<SEQUENCE NAME="/.+/" TIMEOUT="" EXIT-ON="FAILURE">
+  <COMMENT>If SupplierSiteID is not null, map N1 segment</COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="STANDALONE">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAPSET NAME="MapSet" OVERWRITE="true" VARIABLES="false" FIELD="/name;2;0/N101;2;0/code;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">SF</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">unknown</value>
+    <value name="field_name">code</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">false</value>
+    <array name="field_options" type="value" depth="1">
+    </array>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPCOPY NAME="MapCopy" FROM="/SupplierSiteID;1;0" TO="/name;2;0/N102;1;0">
+</MAPCOPY>
+</MAP>
+
+<INVOKE TIMEOUT="" SERVICE="Tutorial.XMLtoEDI:appendSegment" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+
+  <!-- nodes -->
+
+<MAPCOPY NAME="MapCopy" FROM="/name;2;0" TO="/record;2;0">
+</MAPCOPY>
+</MAP>
+
+<MAP MODE="OUTPUT">
+
+  <!-- nodes -->
+
+<MAPDELETE NAME="MapDelete" FIELD="/name;2;0">
+</MAPDELETE>
+
+<MAPDELETE NAME="MapDelete" FIELD="/record;2;0">
+</MAPDELETE>
+</MAP>
+</INVOKE>
+</SEQUENCE>
+</BRANCH>
+
+<MAP MODE="STANDALONE">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAPCOPY NAME="MapCopy" FROM="/recordList;2;1" TO="/N1;2;1">
+</MAPCOPY>
+
+<MAPDELETE NAME="MapDelete" FIELD="/recordList;2;1">
+</MAPDELETE>
+
+<MAPDELETE NAME="MapDelete" FIELD="/BillToAddress;2;0">
+</MAPDELETE>
+
+<MAPDELETE NAME="MapDelete" FIELD="/ShipToAddress;2;0">
+</MAPDELETE>
+
+<MAPDELETE NAME="MapDelete" FIELD="/SupplierSiteID;1;0">
+</MAPDELETE>
+
+<MAPDELETE NAME="MapDelete" FIELD="/DeliverToString1;1;0">
+</MAPDELETE>
+
+<MAPDELETE NAME="MapDelete" FIELD="/values;1;1">
+</MAPDELETE>
+
+<MAPDELETE NAME="MapDelete" FIELD="/DeliverToString2;1;0">
+</MAPDELETE>
+
+<MAPDELETE NAME="MapDelete" FIELD="/deliverToString;1;0">
+</MAPDELETE>
+</MAP>
+</FLOW>

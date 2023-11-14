@@ -1,0 +1,1958 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Exported by webMethods Modeler Version: 6.5.1 Service Pack 1 Build 4 -->
+<Object type="persist.ExportWrapper" oid="Persist::oid7__704_persist.ExportWrapper" version="2">
+  <Value>0</Value>
+  <Value>Administrator^|^1150930218184</Value>
+  <Value>2</Value>
+  <List>
+    <Object modified="Administrator^|^1150929069252" creator="Administrator" type="BusinessProcess" oid="Persist::oid5__53d_BusinessProcess" version="27">
+      <Value>1</Value>
+      <Value>1</Value>
+      <List>
+      </List>
+      <Object type="PersistentReference" oid="Persist::oid5__50f_PersistentReference" version="2">
+        <Value>0</Value>
+        <Value>Persist::oid5__53d_BusinessProcess</Value>
+        <Value>Persist::named::BusinessProcesses</Value>
+        <Value>129</Value>
+        <Value>BusinessProcesses</Value>
+        <Value>true</Value>
+      </Object> <!-- type="PersistentReference"-->
+      <Value>2</Value>
+      <Object type="DataItem" oid="Persist::oid5__584_DataItem" version="5">
+        <Value>0</Value>
+        <Value>EDI Sample Envelope</Value>
+        <Object type="PersistentReference" oid="Persist::oid5__53f_PersistentReference" version="2">
+          <Value>0</Value>
+          <Value>Persist::oid5__584_DataItem</Value>
+          <Value>Persist::oid5__526_ActionNode</Value>
+          <Value>0</Value>
+          <Value>Wait for Envelope</Value>
+          <Value>false</Value>
+        </Object> <!-- type="PersistentReference"-->
+        <Value>204</Value>
+        <Value>0a01359cf70da6f000000498</Value>
+        <Value>0</Value>
+        <Value>Design Server</Value>
+        <Value>Buyer</Value>
+        <Value>Seller</Value>
+        <Value>EDI Sample Envelope</Value>
+        <Value></Value>
+      </Object> <!-- type="DataItem"-->
+      <Object type="DataItem" oid="Persist::oid5__bbe_DataItem" version="5">
+        <Value>0</Value>
+        <Value>X12 Group</Value>
+        <Object type="PersistentReference" oid="Persist::oid5__bbf_PersistentReference" version="2">
+          <Value>0</Value>
+          <Value>Persist::oid5__bbe_DataItem</Value>
+          <Value>Persist::oid5__4f3_ActionNode</Value>
+          <Value>0</Value>
+          <Value>Wait for Technical Acknowledgement</Value>
+          <Value>false</Value>
+        </Object> <!-- type="PersistentReference"-->
+        <Value>204</Value>
+        <Value>WMX12-1-----GROUP-------</Value>
+        <Value>0</Value>
+        <Value>Design Server</Value>
+        <Value>Seller</Value>
+        <Value>Focal role</Value>
+        <Value>X12 Group</Value>
+        <Value></Value>
+      </Object> <!-- type="DataItem"-->
+      <Value>Create_and_Send_EDI_Document</Value>
+      <Value>P2661714686344</Value>
+      <List>
+        <Object type="ActionNode" oid="Persist::oid5__526_ActionNode" version="27">
+          <Value>0</Value>
+          <Value>Wait for Envelope</Value>
+          <Value>^_null_^</Value>
+          <Object type="PersistentReference" oid="Persist::oid5__55f_PersistentReference" version="2">
+            <Value>0</Value>
+            <Value>Persist::oid5__526_ActionNode</Value>
+            <Value>Persist::oid5__53d_BusinessProcess</Value>
+            <Value>0</Value>
+            <Value>Create_and_Send_EDI_Document</Value>
+            <Value>true</Value>
+          </Object> <!-- type="PersistentReference"-->
+          <Value>N1</Value>
+          <List>
+            <Object type="ControlConnection" oid="Persist::oid5__4f9_ControlConnection" version="5">
+              <Value>0</Value>
+              <Value></Value>
+              <Object type="PersistentReference" oid="Persist::oid5__531_PersistentReference" version="2">
+                <Value>0</Value>
+                <Value>Persist::oid5__4f9_ControlConnection</Value>
+                <Value>Persist::oid5__526_ActionNode</Value>
+                <Value>0</Value>
+                <Value>Wait for Envelope</Value>
+                <Value>false</Value>
+              </Object> <!-- type="PersistentReference"-->
+              <Object type="PersistentReference" oid="Persist::oid5__568_PersistentReference" version="2">
+                <Value>0</Value>
+                <Value>Persist::oid5__4f9_ControlConnection</Value>
+                <Value>Persist::oid5__563_ActionNode</Value>
+                <Value>0</Value>
+                <Value>Send Envelope</Value>
+                <Value>false</Value>
+              </Object> <!-- type="PersistentReference"-->
+              <Value>1</Value>
+              <Object type="ConditionList" oid="Persist::oid5__553_ConditionList" version="2">
+                <Value>0</Value>
+                <List>
+                </List>
+                <Value></Value>
+                <Value>0</Value>
+                <Value>^_null_^</Value>
+              </Object> <!-- type="ConditionList"-->
+              <Object type="PersistentReference" oid="Persist::oid5__538_PersistentReference" version="2">
+                <Value>0</Value>
+                <Value>Persist::oid5__4f9_ControlConnection</Value>
+                <Value>^_null_^</Value>
+                <Value>0</Value>
+                <Value>^_null_^</Value>
+                <Value>false</Value>
+              </Object> <!-- type="PersistentReference"-->
+              <Value>false</Value>
+              <Value>1</Value>
+              <Value></Value>
+              <Map>
+                <Key>sourcePort</Key>
+                <Serialized>&lt;Integer&gt;:3</Serialized>
+                <Key>tarx</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEB/4AAAAAAA</Serialized>
+                <Key>srcx</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEB1AAAAAAAA</Serialized>
+                <Key>targetPort</Key>
+                <Serialized>&lt;Integer&gt;:7</Serialized>
+                <Key>tarControlx</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEB8IAAAAAAA</Serialized>
+                <Key>srcControlx</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEB4wAAAAAAA</Serialized>
+                <Key>tary</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEBagAAAAAAA</Serialized>
+                <Key>srcy</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEBagAAAAAAA</Serialized>
+                <Key>tarControly</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEBagAAAAAAA</Serialized>
+                <Key>srcControly</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEBagAAAAAAA</Serialized>
+              </Map>
+            </Object> <!-- type="ControlConnection"-->
+          </List>
+          <Value>0</Value>
+          <List>
+          </List>
+          <Value>0</Value>
+          <List>
+            <Object type="PersistentReference" oid="Persist::oid5__56d_PersistentReference" version="2">
+              <Value>0</Value>
+              <Value>Persist::oid5__526_ActionNode</Value>
+              <Value>Persist::oid5__584_DataItem</Value>
+              <Value>0</Value>
+              <Value>EDI Sample Envelope (EDI Sample Envelope)</Value>
+              <Value>false</Value>
+            </Object> <!-- type="PersistentReference"-->
+          </List>
+          <Value>0</Value>
+          <List>
+          </List>
+          <Value>0</Value>
+          <List>
+          </List>
+          <Value>Create_and_Send_EDI_Document.Create_and_Send_EDI_Document.Design_Server:Wait_for_Envelope</Value>
+          <Value>wm.b2b.editn.sample.util:convertToCM</Value>
+          <Value>false</Value>
+          <Value>service</Value>
+          <Value>false</Value>
+          <Value></Value>
+          <Value>1</Value>
+          <Value>Design Server</Value>
+          <Value>0</Value>
+          <Map>
+          </Map>
+          <List>
+          </List>
+          <Value>Create_and_Send_EDI_Document.Design_Server</Value>
+          <Value>Wait_for_Envelope</Value>
+          <Value>1</Value>
+          <Value>^_null_^</Value>
+          <Value>true</Value>
+          <Value></Value>
+          <Value>1</Value>
+          <Value></Value>
+          <Value>false</Value>
+          <Value>1</Value>
+          <Value></Value>
+          <Value>false</Value>
+          <Value>0</Value>
+          <List>
+          </List>
+          <Value></Value>
+          <Value></Value>
+        </Object> <!-- type="ActionNode"-->
+        <Object type="ActionNode" oid="Persist::oid5__4f3_ActionNode" version="27">
+          <Value>0</Value>
+          <Value>Wait for Technical Acknowledgement</Value>
+          <Value>^_null_^</Value>
+          <Object type="PersistentReference" oid="Persist::oid5__571_PersistentReference" version="2">
+            <Value>0</Value>
+            <Value>Persist::oid5__4f3_ActionNode</Value>
+            <Value>Persist::oid5__53d_BusinessProcess</Value>
+            <Value>0</Value>
+            <Value>Create_and_Send_EDI_Document</Value>
+            <Value>true</Value>
+          </Object> <!-- type="PersistentReference"-->
+          <Value>N2</Value>
+          <List>
+            <Object type="ControlConnection" oid="Persist::oid5__519_ControlConnection" version="5">
+              <Value>0</Value>
+              <Value></Value>
+              <Object type="PersistentReference" oid="Persist::oid5__536_PersistentReference" version="2">
+                <Value>0</Value>
+                <Value>Persist::oid5__519_ControlConnection</Value>
+                <Value>Persist::oid5__4f3_ActionNode</Value>
+                <Value>0</Value>
+                <Value>Wait for Technical Acknowledgement</Value>
+                <Value>false</Value>
+              </Object> <!-- type="PersistentReference"-->
+              <Object type="PersistentReference" oid="Persist::oid5__56e_PersistentReference" version="2">
+                <Value>0</Value>
+                <Value>Persist::oid5__519_ControlConnection</Value>
+                <Value>Persist::oid5__57d_ActionNode</Value>
+                <Value>0</Value>
+                <Value>Process 997</Value>
+                <Value>false</Value>
+              </Object> <!-- type="PersistentReference"-->
+              <Value>1</Value>
+              <Object type="ConditionList" oid="Persist::oid5__547_ConditionList" version="2">
+                <Value>0</Value>
+                <List>
+                </List>
+                <Value></Value>
+                <Value>0</Value>
+                <Value>^_null_^</Value>
+              </Object> <!-- type="ConditionList"-->
+              <Object type="PersistentReference" oid="Persist::oid5__4fa_PersistentReference" version="2">
+                <Value>0</Value>
+                <Value>Persist::oid5__519_ControlConnection</Value>
+                <Value>^_null_^</Value>
+                <Value>0</Value>
+                <Value>^_null_^</Value>
+                <Value>false</Value>
+              </Object> <!-- type="PersistentReference"-->
+              <Value>false</Value>
+              <Value>1</Value>
+              <Value></Value>
+              <Map>
+                <Key>sourcePort</Key>
+                <Serialized>&lt;Integer&gt;:7</Serialized>
+                <Key>tarx</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEB0sAAAAAAA</Serialized>
+                <Key>srcx</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cECAAAAAAAAA</Serialized>
+                <Key>targetPort</Key>
+                <Serialized>&lt;Integer&gt;:3</Serialized>
+                <Key>tarControlx</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEB4cAAAAAAA</Serialized>
+                <Key>srcControlx</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEB8QAAAAAAA</Serialized>
+                <Key>tary</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEBzQAAAAAAA</Serialized>
+                <Key>srcy</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEBzUAAAAAAA</Serialized>
+                <Key>tarControly</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEBzQAAAAAAA</Serialized>
+                <Key>srcControly</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEBzUAAAAAAA</Serialized>
+              </Map>
+            </Object> <!-- type="ControlConnection"-->
+            <Object type="ControlConnection" oid="Persist::oid5__500_ControlConnection" version="5">
+              <Value>0</Value>
+              <Value>Timeout</Value>
+              <Object type="PersistentReference" oid="Persist::oid5__55d_PersistentReference" version="2">
+                <Value>0</Value>
+                <Value>Persist::oid5__500_ControlConnection</Value>
+                <Value>Persist::oid5__4f3_ActionNode</Value>
+                <Value>0</Value>
+                <Value>Wait for Technical Acknowledgement</Value>
+                <Value>false</Value>
+              </Object> <!-- type="PersistentReference"-->
+              <Object type="PersistentReference" oid="Persist::oid5__53e_PersistentReference" version="2">
+                <Value>0</Value>
+                <Value>Persist::oid5__500_ControlConnection</Value>
+                <Value>Persist::oid5__51b_ActionNode</Value>
+                <Value>0</Value>
+                <Value>Step</Value>
+                <Value>false</Value>
+              </Object> <!-- type="PersistentReference"-->
+              <Value>1</Value>
+              <Object type="ConditionList" oid="Persist::oid5__573_ConditionList" version="2">
+                <Value>0</Value>
+                <List>
+                </List>
+                <Value></Value>
+                <Value>0</Value>
+                <Value>^_null_^</Value>
+              </Object> <!-- type="ConditionList"-->
+              <Object type="PersistentReference" oid="Persist::oid5__50d_PersistentReference" version="2">
+                <Value>0</Value>
+                <Value>Persist::oid5__500_ControlConnection</Value>
+                <Value>^_null_^</Value>
+                <Value>0</Value>
+                <Value>^_null_^</Value>
+                <Value>false</Value>
+              </Object> <!-- type="PersistentReference"-->
+              <Value>false</Value>
+              <Value>3</Value>
+              <Value></Value>
+              <Map>
+                <Key>sourcePort</Key>
+                <Serialized>&lt;Integer&gt;:7</Serialized>
+                <Key>tarx</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEB6AAAAAAAA</Serialized>
+                <Key>srcx</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cECAAAAAAAAA</Serialized>
+                <Key>targetPort</Key>
+                <Serialized>&lt;Integer&gt;:5</Serialized>
+                <Key>tarControlx</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEB6AAAAAAAA</Serialized>
+                <Key>srcControlx</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEB8QAAAAAAA</Serialized>
+                <Key>tary</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEBuoAAAAAAA</Serialized>
+                <Key>srcy</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEBzUAAAAAAA</Serialized>
+                <Key>tarControly</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEBx0AAAAAAA</Serialized>
+                <Key>srcControly</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEBzUAAAAAAA</Serialized>
+              </Map>
+            </Object> <!-- type="ControlConnection"-->
+          </List>
+          <Value>0</Value>
+          <List>
+          </List>
+          <Value>0</Value>
+          <List>
+            <Object type="PersistentReference" oid="Persist::oid5__bd4_PersistentReference" version="2">
+              <Value>0</Value>
+              <Value>Persist::oid5__4f3_ActionNode</Value>
+              <Value>Persist::oid5__bbe_DataItem</Value>
+              <Value>0</Value>
+              <Value>X12 Group (X12 Group)</Value>
+              <Value>false</Value>
+            </Object> <!-- type="PersistentReference"-->
+          </List>
+          <Value>0</Value>
+          <List>
+          </List>
+          <Value>0</Value>
+          <List>
+          </List>
+          <Value>Create_and_Send_EDI_Document.Create_and_Send_EDI_Document.Design_Server:Wait_for_Technical_Acknowledgement</Value>
+          <Value>wm.b2b.editn.sample.util:convertToCM</Value>
+          <Value>false</Value>
+          <Value>service</Value>
+          <Value>false</Value>
+          <Value>(  WMX12-1-----GROUP------- and TX-FROM-N7  )</Value>
+          <Value>4</Value>
+          <Value>Design Server</Value>
+          <Value>6000000</Value>
+          <Map>
+            <Key>WMX12-1-----GROUP-------</Key>
+            <Object type="ConditionList" oid="Persist::oid5__bd8_ConditionList" version="2">
+              <Value>0</Value>
+              <List>
+                <Object type="Condition" oid="Persist::oid7__5d3_Condition" version="10">
+                  <Value>0</Value>
+                  <Value>=</Value>
+                  <Value>FA</Value>
+                  <Value></Value>
+                  <Array>
+                    <Value>EDI Group Type</Value>
+                  </Array>
+                  <Object type="PersistentReference" oid="Persist::oid7__5d4_PersistentReference" version="2">
+                    <Value>0</Value>
+                    <Value>Persist::oid7__5d3_Condition</Value>
+                    <Value>Persist::oid5__bbe_DataItem</Value>
+                    <Value>0</Value>
+                    <Value>X12 Group (X12 Group)</Value>
+                    <Value>false</Value>
+                  </Object> <!-- type="PersistentReference"-->
+                  <Value>false</Value>
+                  <Array>
+                  </Array>
+                  <Object type="PersistentReference" oid="Persist::oid7__5d6_PersistentReference" version="2">
+                    <Value>0</Value>
+                    <Value>Persist::oid7__5d3_Condition</Value>
+                    <Value>^_null_^</Value>
+                    <Value>0</Value>
+                    <Value>^_null_^</Value>
+                    <Value>false</Value>
+                  </Object> <!-- type="PersistentReference"-->
+                  <Value>EDIGroupType------------</Value>
+                  <Value>^_null_^</Value>
+                  <Value>^_null_^</Value>
+                  <Value>101</Value>
+                  <Value>0</Value>
+                </Object> <!-- type="Condition"-->
+              </List>
+              <Value></Value>
+              <Value>0</Value>
+              <Value>^_null_^</Value>
+            </Object> <!-- type="ConditionList"-->
+            <Key>7f000001f70d64910000017e</Key>
+            <Object type="ConditionList" oid="Persist::oid5__558_ConditionList" version="2">
+              <Value>0</Value>
+              <List>
+              </List>
+              <Value></Value>
+              <Value>0</Value>
+              <Value>^_null_^</Value>
+            </Object> <!-- type="ConditionList"-->
+          </Map>
+          <List>
+          </List>
+          <Value>Create_and_Send_EDI_Document.Design_Server</Value>
+          <Value>Wait_for_Technical_Acknowledgement</Value>
+          <Value>1</Value>
+          <Value>^_null_^</Value>
+          <Value>true</Value>
+          <Value></Value>
+          <Value>2</Value>
+          <Value></Value>
+          <Value>false</Value>
+          <Value>1</Value>
+          <Value></Value>
+          <Value>false</Value>
+          <Value>0</Value>
+          <List>
+          </List>
+          <Value></Value>
+          <Value></Value>
+        </Object> <!-- type="ActionNode"-->
+        <Object type="ActionNode" oid="Persist::oid5__563_ActionNode" version="27">
+          <Value>0</Value>
+          <Value>Send Envelope</Value>
+          <Value>^_null_^</Value>
+          <Object type="PersistentReference" oid="Persist::oid5__580_PersistentReference" version="2">
+            <Value>0</Value>
+            <Value>Persist::oid5__563_ActionNode</Value>
+            <Value>Persist::oid5__53d_BusinessProcess</Value>
+            <Value>0</Value>
+            <Value>Create_and_Send_EDI_Document</Value>
+            <Value>true</Value>
+          </Object> <!-- type="PersistentReference"-->
+          <Value>N7</Value>
+          <List>
+            <Object type="ControlConnection" oid="Persist::oid5__504_ControlConnection" version="5">
+              <Value>0</Value>
+              <Value></Value>
+              <Object type="PersistentReference" oid="Persist::oid5__544_PersistentReference" version="2">
+                <Value>0</Value>
+                <Value>Persist::oid5__504_ControlConnection</Value>
+                <Value>Persist::oid5__563_ActionNode</Value>
+                <Value>0</Value>
+                <Value>Send Envelope</Value>
+                <Value>false</Value>
+              </Object> <!-- type="PersistentReference"-->
+              <Object type="PersistentReference" oid="Persist::oid5__508_PersistentReference" version="2">
+                <Value>0</Value>
+                <Value>Persist::oid5__504_ControlConnection</Value>
+                <Value>Persist::oid5__4f3_ActionNode</Value>
+                <Value>0</Value>
+                <Value>Wait for Technical Acknowledgement</Value>
+                <Value>false</Value>
+              </Object> <!-- type="PersistentReference"-->
+              <Value>1</Value>
+              <Object type="ConditionList" oid="Persist::oid5__55e_ConditionList" version="2">
+                <Value>0</Value>
+                <List>
+                </List>
+                <Value></Value>
+                <Value>0</Value>
+                <Value>^_null_^</Value>
+              </Object> <!-- type="ConditionList"-->
+              <Object type="PersistentReference" oid="Persist::oid5__521_PersistentReference" version="2">
+                <Value>0</Value>
+                <Value>Persist::oid5__504_ControlConnection</Value>
+                <Value>^_null_^</Value>
+                <Value>0</Value>
+                <Value>^_null_^</Value>
+                <Value>false</Value>
+              </Object> <!-- type="PersistentReference"-->
+              <Value>false</Value>
+              <Value>1</Value>
+              <Value></Value>
+              <Map>
+                <Key>sourcePort</Key>
+                <Serialized>&lt;Integer&gt;:5</Serialized>
+                <Key>tarx</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cECA2AAAAAAA</Serialized>
+                <Key>srcx</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cECAyAAAAAAA</Serialized>
+                <Key>targetPort</Key>
+                <Serialized>&lt;Integer&gt;:1</Serialized>
+                <Key>tarControlx</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cECA2AAAAAAA</Serialized>
+                <Key>srcControlx</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cECAyAAAAAAA</Serialized>
+                <Key>tary</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEBxoAAAAAAA</Serialized>
+                <Key>srcy</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEBiIAAAAAAA</Serialized>
+                <Key>tarControly</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEBuQAAAAAAA</Serialized>
+                <Key>srcControly</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEBnIAAAAAAA</Serialized>
+              </Map>
+            </Object> <!-- type="ControlConnection"-->
+            <Object type="ControlConnection" oid="Persist::oid5__559_ControlConnection" version="5">
+              <Value>0</Value>
+              <Value></Value>
+              <Object type="PersistentReference" oid="Persist::oid5__52a_PersistentReference" version="2">
+                <Value>0</Value>
+                <Value>Persist::oid5__559_ControlConnection</Value>
+                <Value>Persist::oid5__563_ActionNode</Value>
+                <Value>0</Value>
+                <Value>Send Envelope</Value>
+                <Value>false</Value>
+              </Object> <!-- type="PersistentReference"-->
+              <Object type="PersistentReference" oid="Persist::oid5__56f_PersistentReference" version="2">
+                <Value>0</Value>
+                <Value>Persist::oid5__559_ControlConnection</Value>
+                <Value>Persist::oid5__509_ActionNode</Value>
+                <Value>0</Value>
+                <Value>Wait for EDI Document</Value>
+                <Value>false</Value>
+              </Object> <!-- type="PersistentReference"-->
+              <Value>1</Value>
+              <Object type="ConditionList" oid="Persist::oid5__4f8_ConditionList" version="2">
+                <Value>0</Value>
+                <List>
+                </List>
+                <Value></Value>
+                <Value>0</Value>
+                <Value>^_null_^</Value>
+              </Object> <!-- type="ConditionList"-->
+              <Object type="PersistentReference" oid="Persist::oid5__569_PersistentReference" version="2">
+                <Value>0</Value>
+                <Value>Persist::oid5__559_ControlConnection</Value>
+                <Value>^_null_^</Value>
+                <Value>0</Value>
+                <Value>^_null_^</Value>
+                <Value>false</Value>
+              </Object> <!-- type="PersistentReference"-->
+              <Value>false</Value>
+              <Value>1</Value>
+              <Value></Value>
+              <Map>
+                <Key>sourcePort</Key>
+                <Serialized>&lt;Integer&gt;:3</Serialized>
+                <Key>tarx</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cECHoAAAAAAA</Serialized>
+                <Key>srcx</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cECBkAAAAAAA</Serialized>
+                <Key>targetPort</Key>
+                <Serialized>&lt;Integer&gt;:7</Serialized>
+                <Key>tarControlx</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cECFwAAAAAAA</Serialized>
+                <Key>srcControlx</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cECDcAAAAAAA</Serialized>
+                <Key>tary</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEBaAAAAAAAA</Serialized>
+                <Key>srcy</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEBagAAAAAAA</Serialized>
+                <Key>tarControly</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEBaAAAAAAAA</Serialized>
+                <Key>srcControly</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEBagAAAAAAA</Serialized>
+              </Map>
+            </Object> <!-- type="ControlConnection"-->
+          </List>
+          <Value>0</Value>
+          <List>
+          </List>
+          <Value>0</Value>
+          <List>
+          </List>
+          <Value>0</Value>
+          <List>
+          </List>
+          <Value>0</Value>
+          <List>
+          </List>
+          <Value>Create_and_Send_EDI_Document.Create_and_Send_EDI_Document.Design_Server:Send_Envelope</Value>
+          <Value>wm.b2b.editn.sample.sender:SendEnvelope</Value>
+          <Value>false</Value>
+          <Value>service</Value>
+          <Value>false</Value>
+          <Value>(  TX-FROM-N1 or TX-FROM-N5  )</Value>
+          <Value>2</Value>
+          <Value>Design Server</Value>
+          <Value>600000</Value>
+          <Map>
+          </Map>
+          <List>
+          </List>
+          <Value>Create_and_Send_EDI_Document.Design_Server</Value>
+          <Value>Send_Envelope</Value>
+          <Value>1</Value>
+          <Value>^_null_^</Value>
+          <Value>true</Value>
+          <Value></Value>
+          <Value>2</Value>
+          <Value></Value>
+          <Value>false</Value>
+          <Value>1</Value>
+          <Value></Value>
+          <Value>false</Value>
+          <Value>0</Value>
+          <List>
+          </List>
+          <Value></Value>
+          <Value></Value>
+        </Object> <!-- type="ActionNode"-->
+        <Object type="ActionNode" oid="Persist::oid5__57d_ActionNode" version="27">
+          <Value>0</Value>
+          <Value>Process 997</Value>
+          <Value>^_null_^</Value>
+          <Object type="PersistentReference" oid="Persist::oid5__4f7_PersistentReference" version="2">
+            <Value>0</Value>
+            <Value>Persist::oid5__57d_ActionNode</Value>
+            <Value>Persist::oid5__53d_BusinessProcess</Value>
+            <Value>0</Value>
+            <Value>Create_and_Send_EDI_Document</Value>
+            <Value>true</Value>
+          </Object> <!-- type="PersistentReference"-->
+          <Value>N4</Value>
+          <List>
+            <Object type="ControlConnection" oid="Persist::oid5__54b_ControlConnection" version="5">
+              <Value>0</Value>
+              <Value></Value>
+              <Object type="PersistentReference" oid="Persist::oid5__530_PersistentReference" version="2">
+                <Value>0</Value>
+                <Value>Persist::oid5__54b_ControlConnection</Value>
+                <Value>Persist::oid5__57d_ActionNode</Value>
+                <Value>0</Value>
+                <Value>Process 997</Value>
+                <Value>false</Value>
+              </Object> <!-- type="PersistentReference"-->
+              <Object type="PersistentReference" oid="Persist::oid5__532_PersistentReference" version="2">
+                <Value>0</Value>
+                <Value>Persist::oid5__54b_ControlConnection</Value>
+                <Value>Persist::oid5__501_ActionNode</Value>
+                <Value>0</Value>
+                <Value>Update Sending System</Value>
+                <Value>false</Value>
+              </Object> <!-- type="PersistentReference"-->
+              <Value>1</Value>
+              <Object type="ConditionList" oid="Persist::oid5__577_ConditionList" version="2">
+                <Value>0</Value>
+                <List>
+                </List>
+                <Value></Value>
+                <Value>0</Value>
+                <Value>^_null_^</Value>
+              </Object> <!-- type="ConditionList"-->
+              <Object type="PersistentReference" oid="Persist::oid5__51a_PersistentReference" version="2">
+                <Value>0</Value>
+                <Value>Persist::oid5__54b_ControlConnection</Value>
+                <Value>^_null_^</Value>
+                <Value>0</Value>
+                <Value>^_null_^</Value>
+                <Value>false</Value>
+              </Object> <!-- type="PersistentReference"-->
+              <Value>false</Value>
+              <Value>1</Value>
+              <Value></Value>
+              <Map>
+                <Key>sourcePort</Key>
+                <Serialized>&lt;Integer&gt;:7</Serialized>
+                <Key>tarx</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEBioAAAAAAA</Serialized>
+                <Key>srcx</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEBxcAAAAAAA</Serialized>
+                <Key>targetPort</Key>
+                <Serialized>&lt;Integer&gt;:3</Serialized>
+                <Key>tarControlx</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEBqIAAAAAAA</Serialized>
+                <Key>srcControlx</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEBrYAAAAAAA</Serialized>
+                <Key>tary</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEBzQAAAAAAA</Serialized>
+                <Key>srcy</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEBzQAAAAAAA</Serialized>
+                <Key>tarControly</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEBzQAAAAAAA</Serialized>
+                <Key>srcControly</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEBzQAAAAAAA</Serialized>
+              </Map>
+            </Object> <!-- type="ControlConnection"-->
+          </List>
+          <Value>0</Value>
+          <List>
+          </List>
+          <Value>0</Value>
+          <List>
+          </List>
+          <Value>0</Value>
+          <List>
+          </List>
+          <Value>0</Value>
+          <List>
+          </List>
+          <Value>Create_and_Send_EDI_Document.Create_and_Send_EDI_Document.Design_Server:Process_997</Value>
+          <Value>wm.b2b.editn.sample.sender:Process997</Value>
+          <Value>false</Value>
+          <Value>service</Value>
+          <Value>false</Value>
+          <Value></Value>
+          <Value>1</Value>
+          <Value>Design Server</Value>
+          <Value>0</Value>
+          <Map>
+          </Map>
+          <List>
+          </List>
+          <Value>Create_and_Send_EDI_Document.Design_Server</Value>
+          <Value>Process_997</Value>
+          <Value>1</Value>
+          <Value>^_null_^</Value>
+          <Value>true</Value>
+          <Value></Value>
+          <Value>1</Value>
+          <Value></Value>
+          <Value>false</Value>
+          <Value>1</Value>
+          <Value></Value>
+          <Value>false</Value>
+          <Value>0</Value>
+          <List>
+          </List>
+          <Value></Value>
+          <Value></Value>
+        </Object> <!-- type="ActionNode"-->
+        <Object type="ActionNode" oid="Persist::oid5__51b_ActionNode" version="27">
+          <Value>0</Value>
+          <Value>Step</Value>
+          <Value>^_null_^</Value>
+          <Object type="PersistentReference" oid="Persist::oid5__51e_PersistentReference" version="2">
+            <Value>0</Value>
+            <Value>Persist::oid5__51b_ActionNode</Value>
+            <Value>Persist::oid5__53d_BusinessProcess</Value>
+            <Value>0</Value>
+            <Value>Create_and_Send_EDI_Document</Value>
+            <Value>true</Value>
+          </Object> <!-- type="PersistentReference"-->
+          <Value>N5</Value>
+          <List>
+            <Object type="ControlConnection" oid="Persist::oid5__570_ControlConnection" version="5">
+              <Value>0</Value>
+              <Value></Value>
+              <Object type="PersistentReference" oid="Persist::oid5__52c_PersistentReference" version="2">
+                <Value>0</Value>
+                <Value>Persist::oid5__570_ControlConnection</Value>
+                <Value>Persist::oid5__51b_ActionNode</Value>
+                <Value>0</Value>
+                <Value>Step</Value>
+                <Value>false</Value>
+              </Object> <!-- type="PersistentReference"-->
+              <Object type="PersistentReference" oid="Persist::oid5__50e_PersistentReference" version="2">
+                <Value>0</Value>
+                <Value>Persist::oid5__570_ControlConnection</Value>
+                <Value>Persist::oid5__563_ActionNode</Value>
+                <Value>0</Value>
+                <Value>Send Envelope</Value>
+                <Value>false</Value>
+              </Object> <!-- type="PersistentReference"-->
+              <Value>1</Value>
+              <Object type="ConditionList" oid="Persist::oid5__576_ConditionList" version="2">
+                <Value>0</Value>
+                <List>
+                </List>
+                <Value></Value>
+                <Value>0</Value>
+                <Value>^_null_^</Value>
+              </Object> <!-- type="ConditionList"-->
+              <Object type="PersistentReference" oid="Persist::oid5__529_PersistentReference" version="2">
+                <Value>0</Value>
+                <Value>Persist::oid5__570_ControlConnection</Value>
+                <Value>^_null_^</Value>
+                <Value>0</Value>
+                <Value>^_null_^</Value>
+                <Value>false</Value>
+              </Object> <!-- type="PersistentReference"-->
+              <Value>false</Value>
+              <Value>1</Value>
+              <Value></Value>
+              <Map>
+                <Key>sourcePort</Key>
+                <Serialized>&lt;Integer&gt;:3</Serialized>
+                <Key>tarx</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cECAyAAAAAAA</Serialized>
+                <Key>srcx</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEB7kAAAAAAA</Serialized>
+                <Key>targetPort</Key>
+                <Serialized>&lt;Integer&gt;:5</Serialized>
+                <Key>tarControlx</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cECAyAAAAAAA</Serialized>
+                <Key>srcControlx</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEB/UAAAAAAA</Serialized>
+                <Key>tary</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEBiIAAAAAAA</Serialized>
+                <Key>srcy</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEBpwAAAAAAA</Serialized>
+                <Key>tarControly</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEBnIAAAAAAA</Serialized>
+                <Key>srcControly</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEBpwAAAAAAA</Serialized>
+              </Map>
+            </Object> <!-- type="ControlConnection"-->
+          </List>
+          <Value>0</Value>
+          <List>
+          </List>
+          <Value>0</Value>
+          <List>
+          </List>
+          <Value>0</Value>
+          <List>
+          </List>
+          <Value>0</Value>
+          <List>
+          </List>
+          <Value>Create_and_Send_EDI_Document.Create_and_Send_EDI_Document.Design_Server:Step</Value>
+          <Value>pub.prt.admin:changeProcessStatus</Value>
+          <Value>false</Value>
+          <Value>service</Value>
+          <Value>false</Value>
+          <Value></Value>
+          <Value>1</Value>
+          <Value>Design Server</Value>
+          <Value>0</Value>
+          <Map>
+          </Map>
+          <List>
+          </List>
+          <Value>Create_and_Send_EDI_Document.Design_Server</Value>
+          <Value>Step</Value>
+          <Value>1</Value>
+          <Value>^_null_^</Value>
+          <Value>true</Value>
+          <Value></Value>
+          <Value>1</Value>
+          <Value></Value>
+          <Value>false</Value>
+          <Value>1</Value>
+          <Value></Value>
+          <Value>false</Value>
+          <Value>0</Value>
+          <List>
+          </List>
+          <Value></Value>
+          <Value></Value>
+        </Object> <!-- type="ActionNode"-->
+        <Object type="BI.GroupNode" oid="Persist::oid5__554_BI.GroupNode" version="1">
+          <Value>0</Value>
+          <Value>Buyer&apos;s ERP System</Value>
+          <Value>^_null_^</Value>
+          <Object type="PersistentReference" oid="Persist::oid5__585_PersistentReference" version="2">
+            <Value>0</Value>
+            <Value>Persist::oid5__554_BI.GroupNode</Value>
+            <Value>Persist::oid5__53d_BusinessProcess</Value>
+            <Value>0</Value>
+            <Value>Create_and_Send_EDI_Document</Value>
+            <Value>false</Value>
+          </Object> <!-- type="PersistentReference"-->
+          <Value>N6</Value>
+          <Value>2</Value>
+          <Value>0</Value>
+          <List>
+            <Object type="PersistentReference" oid="Persist::oid5__54f_PersistentReference" version="2">
+              <Value>0</Value>
+              <Value>Persist::oid5__554_BI.GroupNode</Value>
+              <Value>Persist::oid5__4fd_ActionNode</Value>
+              <Value>0</Value>
+              <Value>Generate EDI Envelope</Value>
+              <Value>false</Value>
+            </Object> <!-- type="PersistentReference"-->
+            <Object type="PersistentReference" oid="Persist::oid5__55a_PersistentReference" version="2">
+              <Value>0</Value>
+              <Value>Persist::oid5__554_BI.GroupNode</Value>
+              <Value>Persist::oid5__501_ActionNode</Value>
+              <Value>0</Value>
+              <Value>Update Sending System</Value>
+              <Value>false</Value>
+            </Object> <!-- type="PersistentReference"-->
+          </List>
+          <Value>false</Value>
+        </Object> <!-- type="BI.GroupNode"-->
+        <Object type="BI.GroupNode" oid="Persist::oid5__578_BI.GroupNode" version="1">
+          <Value>0</Value>
+          <Value>Buyer</Value>
+          <Value>^_null_^</Value>
+          <Object type="PersistentReference" oid="Persist::oid5__550_PersistentReference" version="2">
+            <Value>0</Value>
+            <Value>Persist::oid5__578_BI.GroupNode</Value>
+            <Value>Persist::oid5__53d_BusinessProcess</Value>
+            <Value>0</Value>
+            <Value>Create_and_Send_EDI_Document</Value>
+            <Value>false</Value>
+          </Object> <!-- type="PersistentReference"-->
+          <Value>N8</Value>
+          <Value>1</Value>
+          <Value>0</Value>
+          <List>
+            <Object type="PersistentReference" oid="Persist::oid5__52b_PersistentReference" version="2">
+              <Value>0</Value>
+              <Value>Persist::oid5__578_BI.GroupNode</Value>
+              <Value>Persist::oid5__526_ActionNode</Value>
+              <Value>0</Value>
+              <Value>Wait for Envelope</Value>
+              <Value>false</Value>
+            </Object> <!-- type="PersistentReference"-->
+            <Object type="PersistentReference" oid="Persist::oid5__539_PersistentReference" version="2">
+              <Value>0</Value>
+              <Value>Persist::oid5__578_BI.GroupNode</Value>
+              <Value>Persist::oid5__563_ActionNode</Value>
+              <Value>0</Value>
+              <Value>Send Envelope</Value>
+              <Value>false</Value>
+            </Object> <!-- type="PersistentReference"-->
+            <Object type="PersistentReference" oid="Persist::oid5__561_PersistentReference" version="2">
+              <Value>0</Value>
+              <Value>Persist::oid5__578_BI.GroupNode</Value>
+              <Value>Persist::oid5__51b_ActionNode</Value>
+              <Value>0</Value>
+              <Value>Step</Value>
+              <Value>false</Value>
+            </Object> <!-- type="PersistentReference"-->
+            <Object type="PersistentReference" oid="Persist::oid5__51f_PersistentReference" version="2">
+              <Value>0</Value>
+              <Value>Persist::oid5__578_BI.GroupNode</Value>
+              <Value>Persist::oid5__57d_ActionNode</Value>
+              <Value>0</Value>
+              <Value>Process 997</Value>
+              <Value>false</Value>
+            </Object> <!-- type="PersistentReference"-->
+            <Object type="PersistentReference" oid="Persist::oid5__505_PersistentReference" version="2">
+              <Value>0</Value>
+              <Value>Persist::oid5__578_BI.GroupNode</Value>
+              <Value>Persist::oid5__4f3_ActionNode</Value>
+              <Value>0</Value>
+              <Value>Wait for Technical Acknowledgement</Value>
+              <Value>false</Value>
+            </Object> <!-- type="PersistentReference"-->
+          </List>
+          <Value>false</Value>
+        </Object> <!-- type="BI.GroupNode"-->
+        <Object type="BI.GroupNode" oid="Persist::oid5__510_BI.GroupNode" version="1">
+          <Value>0</Value>
+          <Value>Seller</Value>
+          <Value>^_null_^</Value>
+          <Object type="PersistentReference" oid="Persist::oid5__566_PersistentReference" version="2">
+            <Value>0</Value>
+            <Value>Persist::oid5__510_BI.GroupNode</Value>
+            <Value>Persist::oid5__53d_BusinessProcess</Value>
+            <Value>0</Value>
+            <Value>Create_and_Send_EDI_Document</Value>
+            <Value>false</Value>
+          </Object> <!-- type="PersistentReference"-->
+          <Value>N9</Value>
+          <Value>2</Value>
+          <Value>0</Value>
+          <List>
+            <Object type="PersistentReference" oid="Persist::oid5__575_PersistentReference" version="2">
+              <Value>0</Value>
+              <Value>Persist::oid5__510_BI.GroupNode</Value>
+              <Value>Persist::oid5__533_ActionNode</Value>
+              <Value>0</Value>
+              <Value>Acknowledge Receipt and Validity</Value>
+              <Value>false</Value>
+            </Object> <!-- type="PersistentReference"-->
+            <Object type="PersistentReference" oid="Persist::oid5__525_PersistentReference" version="2">
+              <Value>0</Value>
+              <Value>Persist::oid5__510_BI.GroupNode</Value>
+              <Value>Persist::oid5__581_ActionNode</Value>
+              <Value>0</Value>
+              <Value>Validate Envelope</Value>
+              <Value>false</Value>
+            </Object> <!-- type="PersistentReference"-->
+            <Object type="PersistentReference" oid="Persist::oid5__4fc_PersistentReference" version="2">
+              <Value>0</Value>
+              <Value>Persist::oid5__510_BI.GroupNode</Value>
+              <Value>Persist::oid5__509_ActionNode</Value>
+              <Value>0</Value>
+              <Value>Wait for EDI Document</Value>
+              <Value>false</Value>
+            </Object> <!-- type="PersistentReference"-->
+          </List>
+          <Value>false</Value>
+        </Object> <!-- type="BI.GroupNode"-->
+        <Object type="ActionNode" oid="Persist::oid5__4fd_ActionNode" version="27">
+          <Value>0</Value>
+          <Value>Generate EDI Envelope</Value>
+          <Value>^_null_^</Value>
+          <Object type="PersistentReference" oid="Persist::oid5__52e_PersistentReference" version="2">
+            <Value>0</Value>
+            <Value>Persist::oid5__4fd_ActionNode</Value>
+            <Value>Persist::oid5__53d_BusinessProcess</Value>
+            <Value>0</Value>
+            <Value>Create_and_Send_EDI_Document</Value>
+            <Value>true</Value>
+          </Object> <!-- type="PersistentReference"-->
+          <Value>N10</Value>
+          <List>
+            <Object type="ControlConnection" oid="Persist::oid5__549_ControlConnection" version="5">
+              <Value>0</Value>
+              <Value></Value>
+              <Object type="PersistentReference" oid="Persist::oid5__506_PersistentReference" version="2">
+                <Value>0</Value>
+                <Value>Persist::oid5__549_ControlConnection</Value>
+                <Value>Persist::oid5__4fd_ActionNode</Value>
+                <Value>0</Value>
+                <Value>Generate EDI Envelope</Value>
+                <Value>false</Value>
+              </Object> <!-- type="PersistentReference"-->
+              <Object type="PersistentReference" oid="Persist::oid5__541_PersistentReference" version="2">
+                <Value>0</Value>
+                <Value>Persist::oid5__549_ControlConnection</Value>
+                <Value>Persist::oid5__526_ActionNode</Value>
+                <Value>0</Value>
+                <Value>Wait for Envelope</Value>
+                <Value>false</Value>
+              </Object> <!-- type="PersistentReference"-->
+              <Value>1</Value>
+              <Object type="ConditionList" oid="Persist::oid5__543_ConditionList" version="2">
+                <Value>0</Value>
+                <List>
+                </List>
+                <Value></Value>
+                <Value>0</Value>
+                <Value>^_null_^</Value>
+              </Object> <!-- type="ConditionList"-->
+              <Object type="PersistentReference" oid="Persist::oid5__55c_PersistentReference" version="2">
+                <Value>0</Value>
+                <Value>Persist::oid5__549_ControlConnection</Value>
+                <Value>^_null_^</Value>
+                <Value>0</Value>
+                <Value>^_null_^</Value>
+                <Value>false</Value>
+              </Object> <!-- type="PersistentReference"-->
+              <Value>false</Value>
+              <Value>1</Value>
+              <Value></Value>
+              <Map>
+                <Key>sourcePort</Key>
+                <Serialized>&lt;Integer&gt;:3</Serialized>
+                <Key>tarx</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEBxwAAAAAAA</Serialized>
+                <Key>srcx</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEBiIAAAAAAA</Serialized>
+                <Key>targetPort</Key>
+                <Serialized>&lt;Integer&gt;:7</Serialized>
+                <Key>tarControlx</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEBsAAAAAAAA</Serialized>
+                <Key>srcControlx</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEBpoAAAAAAA</Serialized>
+                <Key>tary</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEBagAAAAAAA</Serialized>
+                <Key>srcy</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEBagAAAAAAA</Serialized>
+                <Key>tarControly</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEBagAAAAAAA</Serialized>
+                <Key>srcControly</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEBagAAAAAAA</Serialized>
+              </Map>
+            </Object> <!-- type="ControlConnection"-->
+          </List>
+          <Value>0</Value>
+          <List>
+          </List>
+          <Value>0</Value>
+          <List>
+          </List>
+          <Value>0</Value>
+          <List>
+          </List>
+          <Value>0</Value>
+          <List>
+          </List>
+          <Value>Create_and_Send_EDI_Document.Create_and_Send_EDI_Document.Design_Server:Generate_EDI_Envelope</Value>
+          <Value>^_null_^</Value>
+          <Value>false</Value>
+          <Value>^_null_^</Value>
+          <Value>false</Value>
+          <Value></Value>
+          <Value>1</Value>
+          <Value>Design Server</Value>
+          <Value>0</Value>
+          <Map>
+          </Map>
+          <List>
+          </List>
+          <Value>Create_and_Send_EDI_Document.Design_Server</Value>
+          <Value>Generate_EDI_Envelope</Value>
+          <Value>1</Value>
+          <Value>^_null_^</Value>
+          <Value>true</Value>
+          <Value></Value>
+          <Value>1</Value>
+          <Value></Value>
+          <Value>false</Value>
+          <Value>1</Value>
+          <Value></Value>
+          <Value>false</Value>
+          <Value>0</Value>
+          <List>
+          </List>
+          <Value></Value>
+          <Value></Value>
+        </Object> <!-- type="ActionNode"-->
+        <Object type="ActionNode" oid="Persist::oid5__501_ActionNode" version="27">
+          <Value>0</Value>
+          <Value>Update Sending System</Value>
+          <Value>^_null_^</Value>
+          <Object type="PersistentReference" oid="Persist::oid5__56a_PersistentReference" version="2">
+            <Value>0</Value>
+            <Value>Persist::oid5__501_ActionNode</Value>
+            <Value>Persist::oid5__53d_BusinessProcess</Value>
+            <Value>0</Value>
+            <Value>Create_and_Send_EDI_Document</Value>
+            <Value>true</Value>
+          </Object> <!-- type="PersistentReference"-->
+          <Value>N11</Value>
+          <List>
+          </List>
+          <Value>0</Value>
+          <List>
+          </List>
+          <Value>0</Value>
+          <List>
+          </List>
+          <Value>0</Value>
+          <List>
+          </List>
+          <Value>0</Value>
+          <List>
+          </List>
+          <Value>Create_and_Send_EDI_Document.Create_and_Send_EDI_Document.Design_Server:Update_Sending_System</Value>
+          <Value>^_null_^</Value>
+          <Value>false</Value>
+          <Value>^_null_^</Value>
+          <Value>false</Value>
+          <Value></Value>
+          <Value>1</Value>
+          <Value>Design Server</Value>
+          <Value>0</Value>
+          <Map>
+          </Map>
+          <List>
+          </List>
+          <Value>Create_and_Send_EDI_Document.Design_Server</Value>
+          <Value>Update_Sending_System</Value>
+          <Value>1</Value>
+          <Value>^_null_^</Value>
+          <Value>true</Value>
+          <Value></Value>
+          <Value>1</Value>
+          <Value></Value>
+          <Value>false</Value>
+          <Value>1</Value>
+          <Value></Value>
+          <Value>false</Value>
+          <Value>0</Value>
+          <List>
+          </List>
+          <Value></Value>
+          <Value></Value>
+        </Object> <!-- type="ActionNode"-->
+        <Object type="ActionNode" oid="Persist::oid5__509_ActionNode" version="27">
+          <Value>0</Value>
+          <Value>Wait for EDI Document</Value>
+          <Value>^_null_^</Value>
+          <Object type="PersistentReference" oid="Persist::oid5__57b_PersistentReference" version="2">
+            <Value>0</Value>
+            <Value>Persist::oid5__509_ActionNode</Value>
+            <Value>Persist::oid5__53d_BusinessProcess</Value>
+            <Value>0</Value>
+            <Value>Create_and_Send_EDI_Document</Value>
+            <Value>true</Value>
+          </Object> <!-- type="PersistentReference"-->
+          <Value>N12</Value>
+          <List>
+            <Object type="ControlConnection" oid="Persist::oid5__56b_ControlConnection" version="5">
+              <Value>0</Value>
+              <Value></Value>
+              <Object type="PersistentReference" oid="Persist::oid5__54a_PersistentReference" version="2">
+                <Value>0</Value>
+                <Value>Persist::oid5__56b_ControlConnection</Value>
+                <Value>Persist::oid5__509_ActionNode</Value>
+                <Value>0</Value>
+                <Value>Wait for EDI Document</Value>
+                <Value>false</Value>
+              </Object> <!-- type="PersistentReference"-->
+              <Object type="PersistentReference" oid="Persist::oid5__560_PersistentReference" version="2">
+                <Value>0</Value>
+                <Value>Persist::oid5__56b_ControlConnection</Value>
+                <Value>Persist::oid5__581_ActionNode</Value>
+                <Value>0</Value>
+                <Value>Validate Envelope</Value>
+                <Value>false</Value>
+              </Object> <!-- type="PersistentReference"-->
+              <Value>1</Value>
+              <Object type="ConditionList" oid="Persist::oid5__4f1_ConditionList" version="2">
+                <Value>0</Value>
+                <List>
+                </List>
+                <Value></Value>
+                <Value>0</Value>
+                <Value>^_null_^</Value>
+              </Object> <!-- type="ConditionList"-->
+              <Object type="PersistentReference" oid="Persist::oid5__55b_PersistentReference" version="2">
+                <Value>0</Value>
+                <Value>Persist::oid5__56b_ControlConnection</Value>
+                <Value>^_null_^</Value>
+                <Value>0</Value>
+                <Value>^_null_^</Value>
+                <Value>false</Value>
+              </Object> <!-- type="PersistentReference"-->
+              <Value>false</Value>
+              <Value>1</Value>
+              <Value></Value>
+              <Map>
+                <Key>sourcePort</Key>
+                <Serialized>&lt;Integer&gt;:5</Serialized>
+                <Key>tarx</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cECIiAAAAAAA</Serialized>
+                <Key>srcx</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cECIeAAAAAAA</Serialized>
+                <Key>targetPort</Key>
+                <Serialized>&lt;Integer&gt;:1</Serialized>
+                <Key>tarControlx</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cECIiAAAAAAA</Serialized>
+                <Key>srcControlx</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cECIeAAAAAAA</Serialized>
+                <Key>tary</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEBmYAAAAAAA</Serialized>
+                <Key>srcy</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEBjoAAAAAAA</Serialized>
+                <Key>tarControly</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEBhYAAAAAAA</Serialized>
+                <Key>srcControly</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEBooAAAAAAA</Serialized>
+              </Map>
+            </Object> <!-- type="ControlConnection"-->
+          </List>
+          <Value>0</Value>
+          <List>
+          </List>
+          <Value>0</Value>
+          <List>
+          </List>
+          <Value>0</Value>
+          <List>
+          </List>
+          <Value>0</Value>
+          <List>
+          </List>
+          <Value>Create_and_Send_EDI_Document.Create_and_Send_EDI_Document.Design_Server:Wait_for_EDI_Document</Value>
+          <Value>^_null_^</Value>
+          <Value>false</Value>
+          <Value>^_null_^</Value>
+          <Value>false</Value>
+          <Value></Value>
+          <Value>1</Value>
+          <Value>Design Server</Value>
+          <Value>0</Value>
+          <Map>
+          </Map>
+          <List>
+          </List>
+          <Value>Create_and_Send_EDI_Document.Design_Server</Value>
+          <Value>Wait_for_EDI_Document</Value>
+          <Value>1</Value>
+          <Value>^_null_^</Value>
+          <Value>true</Value>
+          <Value></Value>
+          <Value>1</Value>
+          <Value></Value>
+          <Value>false</Value>
+          <Value>1</Value>
+          <Value></Value>
+          <Value>false</Value>
+          <Value>0</Value>
+          <List>
+          </List>
+          <Value></Value>
+          <Value></Value>
+        </Object> <!-- type="ActionNode"-->
+        <Object type="ActionNode" oid="Persist::oid5__581_ActionNode" version="27">
+          <Value>0</Value>
+          <Value>Validate Envelope</Value>
+          <Value>^_null_^</Value>
+          <Object type="PersistentReference" oid="Persist::oid5__546_PersistentReference" version="2">
+            <Value>0</Value>
+            <Value>Persist::oid5__581_ActionNode</Value>
+            <Value>Persist::oid5__53d_BusinessProcess</Value>
+            <Value>0</Value>
+            <Value>Create_and_Send_EDI_Document</Value>
+            <Value>true</Value>
+          </Object> <!-- type="PersistentReference"-->
+          <Value>N13</Value>
+          <List>
+            <Object type="ControlConnection" oid="Persist::oid5__507_ControlConnection" version="5">
+              <Value>0</Value>
+              <Value></Value>
+              <Object type="PersistentReference" oid="Persist::oid5__523_PersistentReference" version="2">
+                <Value>0</Value>
+                <Value>Persist::oid5__507_ControlConnection</Value>
+                <Value>Persist::oid5__581_ActionNode</Value>
+                <Value>0</Value>
+                <Value>Validate Envelope</Value>
+                <Value>false</Value>
+              </Object> <!-- type="PersistentReference"-->
+              <Object type="PersistentReference" oid="Persist::oid5__53b_PersistentReference" version="2">
+                <Value>0</Value>
+                <Value>Persist::oid5__507_ControlConnection</Value>
+                <Value>Persist::oid5__533_ActionNode</Value>
+                <Value>0</Value>
+                <Value>Acknowledge Receipt and Validity</Value>
+                <Value>false</Value>
+              </Object> <!-- type="PersistentReference"-->
+              <Value>1</Value>
+              <Object type="ConditionList" oid="Persist::oid5__548_ConditionList" version="2">
+                <Value>0</Value>
+                <List>
+                </List>
+                <Value></Value>
+                <Value>0</Value>
+                <Value>^_null_^</Value>
+              </Object> <!-- type="ConditionList"-->
+              <Object type="PersistentReference" oid="Persist::oid5__52d_PersistentReference" version="2">
+                <Value>0</Value>
+                <Value>Persist::oid5__507_ControlConnection</Value>
+                <Value>^_null_^</Value>
+                <Value>0</Value>
+                <Value>^_null_^</Value>
+                <Value>false</Value>
+              </Object> <!-- type="PersistentReference"-->
+              <Value>false</Value>
+              <Value>1</Value>
+              <Value></Value>
+              <Map>
+                <Key>sourcePort</Key>
+                <Serialized>&lt;Integer&gt;:5</Serialized>
+                <Key>tarx</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cECImAAAAAAA</Serialized>
+                <Key>srcx</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cECIiAAAAAAA</Serialized>
+                <Key>targetPort</Key>
+                <Serialized>&lt;Integer&gt;:1</Serialized>
+                <Key>tarControlx</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cECImAAAAAAA</Serialized>
+                <Key>srcControlx</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cECIiAAAAAAA</Serialized>
+                <Key>tary</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEBxoAAAAAAA</Serialized>
+                <Key>srcy</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEBuoAAAAAAA</Serialized>
+                <Key>tarControly</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEBuQAAAAAAA</Serialized>
+                <Key>srcControly</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEBx0AAAAAAA</Serialized>
+              </Map>
+            </Object> <!-- type="ControlConnection"-->
+          </List>
+          <Value>0</Value>
+          <List>
+          </List>
+          <Value>0</Value>
+          <List>
+          </List>
+          <Value>0</Value>
+          <List>
+          </List>
+          <Value>0</Value>
+          <List>
+          </List>
+          <Value>Create_and_Send_EDI_Document.Create_and_Send_EDI_Document.Design_Server:Validate_Envelope</Value>
+          <Value>^_null_^</Value>
+          <Value>false</Value>
+          <Value>^_null_^</Value>
+          <Value>false</Value>
+          <Value></Value>
+          <Value>1</Value>
+          <Value>Design Server</Value>
+          <Value>0</Value>
+          <Map>
+          </Map>
+          <List>
+          </List>
+          <Value>Create_and_Send_EDI_Document.Design_Server</Value>
+          <Value>Validate_Envelope</Value>
+          <Value>1</Value>
+          <Value>^_null_^</Value>
+          <Value>true</Value>
+          <Value></Value>
+          <Value>1</Value>
+          <Value></Value>
+          <Value>false</Value>
+          <Value>1</Value>
+          <Value></Value>
+          <Value>false</Value>
+          <Value>0</Value>
+          <List>
+          </List>
+          <Value></Value>
+          <Value></Value>
+        </Object> <!-- type="ActionNode"-->
+        <Object type="ActionNode" oid="Persist::oid5__533_ActionNode" version="27">
+          <Value>0</Value>
+          <Value>Acknowledge Receipt and Validity</Value>
+          <Value>^_null_^</Value>
+          <Object type="PersistentReference" oid="Persist::oid5__520_PersistentReference" version="2">
+            <Value>0</Value>
+            <Value>Persist::oid5__533_ActionNode</Value>
+            <Value>Persist::oid5__53d_BusinessProcess</Value>
+            <Value>0</Value>
+            <Value>Create_and_Send_EDI_Document</Value>
+            <Value>true</Value>
+          </Object> <!-- type="PersistentReference"-->
+          <Value>N14</Value>
+          <List>
+            <Object type="ControlConnection" oid="Persist::oid5__574_ControlConnection" version="5">
+              <Value>0</Value>
+              <Value></Value>
+              <Object type="PersistentReference" oid="Persist::oid5__4f2_PersistentReference" version="2">
+                <Value>0</Value>
+                <Value>Persist::oid5__574_ControlConnection</Value>
+                <Value>Persist::oid5__533_ActionNode</Value>
+                <Value>0</Value>
+                <Value>Acknowledge Receipt and Validity</Value>
+                <Value>false</Value>
+              </Object> <!-- type="PersistentReference"-->
+              <Object type="PersistentReference" oid="Persist::oid5__524_PersistentReference" version="2">
+                <Value>0</Value>
+                <Value>Persist::oid5__574_ControlConnection</Value>
+                <Value>Persist::oid5__4f3_ActionNode</Value>
+                <Value>0</Value>
+                <Value>Wait for Technical Acknowledgement</Value>
+                <Value>false</Value>
+              </Object> <!-- type="PersistentReference"-->
+              <Value>1</Value>
+              <Object type="ConditionList" oid="Persist::oid5__516_ConditionList" version="2">
+                <Value>0</Value>
+                <List>
+                </List>
+                <Value></Value>
+                <Value>0</Value>
+                <Value>^_null_^</Value>
+              </Object> <!-- type="ConditionList"-->
+              <Object type="PersistentReference" oid="Persist::oid5__513_PersistentReference" version="2">
+                <Value>0</Value>
+                <Value>Persist::oid5__574_ControlConnection</Value>
+                <Value>^_null_^</Value>
+                <Value>0</Value>
+                <Value>^_null_^</Value>
+                <Value>false</Value>
+              </Object> <!-- type="PersistentReference"-->
+              <Value>false</Value>
+              <Value>1</Value>
+              <Value></Value>
+              <Map>
+                <Key>sourcePort</Key>
+                <Serialized>&lt;Integer&gt;:7</Serialized>
+                <Key>tarx</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cECBoAAAAAAA</Serialized>
+                <Key>srcx</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cECHwAAAAAAA</Serialized>
+                <Key>targetPort</Key>
+                <Serialized>&lt;Integer&gt;:3</Serialized>
+                <Key>tarControlx</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cECDgAAAAAAA</Serialized>
+                <Key>srcControlx</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cECF4AAAAAAA</Serialized>
+                <Key>tary</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEBzUAAAAAAA</Serialized>
+                <Key>srcy</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEBzUAAAAAAA</Serialized>
+                <Key>tarControly</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEBzUAAAAAAA</Serialized>
+                <Key>srcControly</Key>
+                <Serialized>rO0ABXNyABBqYXZhLmxhbmcuRG91YmxlgLPCSilr+wQCAAFEAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cEBzUAAAAAAA</Serialized>
+              </Map>
+            </Object> <!-- type="ControlConnection"-->
+          </List>
+          <Value>0</Value>
+          <List>
+          </List>
+          <Value>0</Value>
+          <List>
+          </List>
+          <Value>0</Value>
+          <List>
+          </List>
+          <Value>0</Value>
+          <List>
+          </List>
+          <Value>Create_and_Send_EDI_Document.Create_and_Send_EDI_Document.Design_Server:Acknowledge_Receipt_and_Validity</Value>
+          <Value>^_null_^</Value>
+          <Value>false</Value>
+          <Value>^_null_^</Value>
+          <Value>false</Value>
+          <Value></Value>
+          <Value>1</Value>
+          <Value>Design Server</Value>
+          <Value>0</Value>
+          <Map>
+          </Map>
+          <List>
+          </List>
+          <Value>Create_and_Send_EDI_Document.Design_Server</Value>
+          <Value>Acknowledge_Receipt_and_Validity</Value>
+          <Value>1</Value>
+          <Value>^_null_^</Value>
+          <Value>true</Value>
+          <Value></Value>
+          <Value>1</Value>
+          <Value></Value>
+          <Value>false</Value>
+          <Value>1</Value>
+          <Value></Value>
+          <Value>false</Value>
+          <Value>0</Value>
+          <List>
+          </List>
+          <Value></Value>
+          <Value></Value>
+        </Object> <!-- type="ActionNode"-->
+      </List>
+      <Object type="BPMLayout" oid="Persist::oid5__56c_BPMLayout" version="2">
+        <Value>0</Value>
+        <Map>
+          <Key>N4</Key>
+          <Serialized>&lt;Rectangle&gt;:java.awt.Rectangle[x=261,y=286,width=90,height=60]</Serialized>
+          <Key>N1</Key>
+          <Serialized>&lt;Rectangle&gt;:java.awt.Rectangle[x=266,y=84,width=90,height=60]</Serialized>
+          <Key>N9</Key>
+          <Serialized>&lt;Rectangle&gt;:java.awt.Rectangle[x=650,y=39,width=283,height=330]</Serialized>
+          <Key>N2</Key>
+          <Serialized>&lt;Rectangle&gt;:java.awt.Rectangle[x=494,y=287,width=90,height=60]</Serialized>
+          <Key>N5</Key>
+          <Serialized>&lt;Rectangle&gt;:java.awt.Rectangle[x=371,y=184,width=90,height=62]</Serialized>
+          <Key>N10</Key>
+          <Serialized>&lt;Rectangle&gt;:java.awt.Rectangle[x=75,y=84,width=90,height=62]</Serialized>
+          <Key>N8</Key>
+          <Serialized>&lt;Rectangle&gt;:java.awt.Rectangle[x=250,y=40,width=383,height=329]</Serialized>
+          <Key>N11</Key>
+          <Serialized>&lt;Rectangle&gt;:java.awt.Rectangle[x=79,y=286,width=90,height=62]</Serialized>
+          <Key>N6</Key>
+          <Serialized>&lt;Rectangle&gt;:java.awt.Rectangle[x=21,y=40,width=209,height=330]</Serialized>
+          <Key>N7</Key>
+          <Serialized>&lt;Rectangle&gt;:java.awt.Rectangle[x=492,y=84,width=90,height=60]</Serialized>
+          <Key>N12</Key>
+          <Serialized>&lt;Rectangle&gt;:java.awt.Rectangle[x=737,y=82,width=93,height=62]</Serialized>
+          <Key>N14</Key>
+          <Serialized>&lt;Rectangle&gt;:java.awt.Rectangle[x=742,y=287,width=90,height=62]</Serialized>
+          <Key>N13</Key>
+          <Serialized>&lt;Rectangle&gt;:java.awt.Rectangle[x=740,y=184,width=90,height=62]</Serialized>
+          <Key>Persist::oid2__135_ActionNode</Key>
+          <Serialized>&lt;Rectangle&gt;:java.awt.Rectangle[x=300,y=210,width=90,height=60]</Serialized>
+        </Map>
+        <Map>
+          <Key>N4</Key>
+          <Serialized>rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAh3CAAAAAsAAAABdAAEaWNvbnQAZmphcjpmaWxlOi9EOi93ZWJNZXRob2RzL0RhbnViZS9CdWlsZDIxMy9Nb2RlbGVyL2xpYi9iaWFwcC5qYXIhL2NvbS93bS9iZXJrZWxleS9pY29ucy80MC5tYW5hZ2VycGVyLmdpZng=</Serialized>
+          <Key>N1</Key>
+          <Serialized>rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAh3CAAAAAsAAAABdAAEaWNvbnQAZWphcjpmaWxlOi9EOi93ZWJNZXRob2RzL0RhbnViZS9CdWlsZDIxMy9Nb2RlbGVyL2xpYi9iaWFwcC5qYXIhL2NvbS93bS9iZXJrZWxleS9pY29ucy80MC5zdG9wbGlnaHQuZ2lmeA==</Serialized>
+          <Key>N9</Key>
+          <Serialized>rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAh3CAAAAAsAAAABdAAKYmFja2dyb3VuZHNyAA5qYXZhLmF3dC5Db2xvcgGlF4MQjzN1AgAFRgAGZmFscGhhSQAFdmFsdWVMAAJjc3QAG0xqYXZhL2F3dC9jb2xvci9Db2xvclNwYWNlO1sACWZyZ2J2YWx1ZXQAAltGWwAGZnZhbHVlcQB+AAV4cAAAAAD/FGX/cHBweA==</Serialized>
+          <Key>N2</Key>
+          <Serialized>rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAh3CAAAAAsAAAABdAAEaWNvbnQAZWphcjpmaWxlOi9EOi93ZWJNZXRob2RzL0RhbnViZS9CdWlsZDIxMy9Nb2RlbGVyL2xpYi9iaWFwcC5qYXIhL2NvbS93bS9iZXJrZWxleS9pY29ucy80MC5zdG9wbGlnaHQuZ2lmeA==</Serialized>
+          <Key>N5</Key>
+          <Serialized>rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAh3CAAAAAsAAAABdAAEaWNvbnQAYWphcjpmaWxlOi9EOi93ZWJNZXRob2RzL0RhbnViZS9CdWlsZDIxMy9Nb2RlbGVyL2xpYi9iaWFwcC5qYXIhL2NvbS93bS9iZXJrZWxleS9pY29ucy80MC5hYm9ydC5naWZ4</Serialized>
+          <Key>N10</Key>
+          <Serialized>rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAh3CAAAAAsAAAABdAAEaWNvbnQAaGphcjpmaWxlOi9EOi93ZWJNZXRob2RzL0RhbnViZS9CdWlsZDIxMy9Nb2RlbGVyL2xpYi9iaWFwcC5qYXIhL2NvbS93bS9iZXJrZWxleS9pY29ucy80MC5mbGF0c2NyZWVucGMuZ2lmeA==</Serialized>
+          <Key>N8</Key>
+          <Serialized>rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAh3CAAAAAsAAAACdAAKYmFja2dyb3VuZHNyAA5qYXZhLmF3dC5Db2xvcgGlF4MQjzN1AgAFRgAGZmFscGhhSQAFdmFsdWVMAAJjc3QAG0xqYXZhL2F3dC9jb2xvci9Db2xvclNwYWNlO1sACWZyZ2J2YWx1ZXQAAltGWwAGZnZhbHVlcQB+AAV4cAAAAAD/AMhkcHBwdAAPZHJhdy5iYWNrZ3JvdW5kc3IAEWphdmEubGFuZy5Cb29sZWFuzSBygNWc+u4CAAFaAAV2YWx1ZXhwAXg=</Serialized>
+          <Key>N11</Key>
+          <Serialized>rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAh3CAAAAAsAAAABdAAEaWNvbnQAZWphcjpmaWxlOi9EOi93ZWJNZXRob2RzL0RhbnViZS9CdWlsZDIxMy9Nb2RlbGVyL2xpYi9iaWFwcC5qYXIhL2NvbS93bS9iZXJrZWxleS9pY29ucy80MC53b3Jrb3JkZXIuZ2lmeA==</Serialized>
+          <Key>N6</Key>
+          <Serialized>rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAh3CAAAAAsAAAABdAAKYmFja2dyb3VuZHNyACpjb20ud20uYmVya2VsZXkuZ3JhcGguR3JhZGllbnRQYWludFdyYXBwZXKKP6zFBLfZ0gIAB1oAB19jeWNsaWNGAANfeDFGAANfeDJGAANfeTFGAANfeTJMAAdfY29sb3IxdAAQTGphdmEvYXd0L0NvbG9yO0wAB19jb2xvcjJxAH4ABHhwAAAAAAAAAAAAAAAAAAAAAABzcgAOamF2YS5hd3QuQ29sb3IBpReDEI8zdQIABUYABmZhbHBoYUkABXZhbHVlTAACY3N0ABtMamF2YS9hd3QvY29sb3IvQ29sb3JTcGFjZTtbAAlmcmdidmFsdWV0AAJbRlsABmZ2YWx1ZXEAfgAIeHAAAAAA/73R4HBwcHNxAH4ABgAAAAD/////cHBweA==</Serialized>
+          <Key>N7</Key>
+          <Serialized>rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAh3CAAAAAsAAAACdAAEaWNvbnQAZGphcjpmaWxlOi9EOi93ZWJNZXRob2RzL0RhbnViZS9CdWlsZDIxMy9Nb2RlbGVyL2xpYi9iaWFwcC5qYXIhL2NvbS93bS9iZXJrZWxleS9pY29ucy80MC5haXJwbGFuZS5naWZ0AAJOMnNyAA5qYXZhLmF3dC5Qb2ludLbEinI0fsgmAgACSQABeEkAAXl4cAAAAAAAAAABeA==</Serialized>
+          <Key>N12</Key>
+          <Serialized>rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAh3CAAAAAsAAAABdAAEaWNvbnQAZWphcjpmaWxlOi9EOi93ZWJNZXRob2RzL0RhbnViZS9CdWlsZDIxMy9Nb2RlbGVyL2xpYi9iaWFwcC5qYXIhL2NvbS93bS9iZXJrZWxleS9pY29ucy80MC5zdG9wbGlnaHQuZ2lmeA==</Serialized>
+          <Key>N14</Key>
+          <Serialized>rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAh3CAAAAAsAAAABdAAEaWNvbnQAZGphcjpmaWxlOi9EOi93ZWJNZXRob2RzL0RhbnViZS9CdWlsZDIxMy9Nb2RlbGVyL2xpYi9iaWFwcC5qYXIhL2NvbS93bS9iZXJrZWxleS9pY29ucy80MC5haXJwbGFuZS5naWZ4</Serialized>
+          <Key>N13</Key>
+          <Serialized>rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAh3CAAAAAsAAAABdAAEaWNvbnQAY2phcjpmaWxlOi9EOi93ZWJNZXRob2RzL0RhbnViZS9CdWlsZDIxMy9Nb2RlbGVyL2xpYi9iaWFwcC5qYXIhL2NvbS93bS9iZXJrZWxleS9pY29ucy80MC5zdWNjZXNzLmdpZng=</Serialized>
+          <Key>Persist::oid2__135_ActionNode</Key>
+          <Serialized>rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAh3CAAAAAsAAAABdAAEaWNvbnQAYGphcjpmaWxlOi9EOi93ZWJNZXRob2RzL0RhbnViZS9CdWlsZDIxMC9Nb2RlbGVyL2xpYi9iaWFwcC5qYXIhL2NvbS93bS9iZXJrZWxleS9pY29ucy80MC5nZWFyLmdpZng=</Serialized>
+        </Map>
+        <Map>
+          <Key>zoom</Key>
+          <Serialized>&lt;Integer&gt;:100</Serialized>
+        </Map>
+      </Object> <!-- type="BPMLayout"-->
+      <Value>^_null_^</Value>
+      <Array>
+      </Array>
+      <Value>jar:file:C:/webMethods/Gremlin/test4/Modeler/lib/biapp.jar!/com/wm/berkeley/icons/40.referenced.process.gif</Value>
+      <Value>^_null_^</Value>
+      <Value>true</Value>
+      <Value>1</Value>
+      <Object type="ProcessDeploymentInfo" oid="Persist::oid7__608_ProcessDeploymentInfo" version="11">
+        <Value>0</Value>
+        <Value>Create_and_Send_EDI_Document</Value>
+        <Map>
+          <Key>Design Server</Key>
+          <Serialized>rO0ABXQAEWNyb21hcnktZDYwMDo1NTU1</Serialized>
+        </Map>
+        <Map>
+          <Key>N11</Key>
+          <Object type="StepDeploymentInfo" oid="Persist::oid7__60b_StepDeploymentInfo" version="7">
+            <Value>0</Value>
+            <Value>Update Sending System</Value>
+            <Value>N11</Value>
+            <Value>Design Server</Value>
+            <Value>Create_and_Send_EDI_Document.Create_and_Send_EDI_Document.Design_Server:Update_Sending_System</Value>
+            <Value>^_null_^</Value>
+            <Value>false</Value>
+            <Value></Value>
+            <Value></Value>
+            <Value>^_null_^</Value>
+            <Map>
+            </Map>
+            <Map>
+            </Map>
+            <Value>1</Value>
+          </Object> <!-- type="StepDeploymentInfo"-->
+          <Key>N4</Key>
+          <Object type="StepDeploymentInfo" oid="Persist::oid7__610_StepDeploymentInfo" version="7">
+            <Value>0</Value>
+            <Value>Process 997</Value>
+            <Value>N4</Value>
+            <Value>Design Server</Value>
+            <Value>Create_and_Send_EDI_Document.Create_and_Send_EDI_Document.Design_Server:Process_997</Value>
+            <Value>wm.b2b.editn.sample.sender:Process997</Value>
+            <Value>false</Value>
+            <Value></Value>
+            <Value></Value>
+            <Value>^_null_^</Value>
+            <Map>
+            </Map>
+            <Map>
+            </Map>
+            <Value>1</Value>
+          </Object> <!-- type="StepDeploymentInfo"-->
+          <Key>N1</Key>
+          <Object type="StepDeploymentInfo" oid="Persist::oid7__609_StepDeploymentInfo" version="7">
+            <Value>0</Value>
+            <Value>Wait for Envelope</Value>
+            <Value>N1</Value>
+            <Value>Design Server</Value>
+            <Value>Create_and_Send_EDI_Document.Create_and_Send_EDI_Document.Design_Server:Wait_for_Envelope</Value>
+            <Value>wm.b2b.editn.sample.util:convertToCM</Value>
+            <Value>false</Value>
+            <Value></Value>
+            <Value></Value>
+            <Value>^_null_^</Value>
+            <Map>
+              <Key>EDI Sample Envelope</Key>
+              <Serialized>rO0ABXQAGDBhMDEzNTljZjcwZGE2ZjAwMDAwMDQ5OA==</Serialized>
+            </Map>
+            <Map>
+            </Map>
+            <Value>1</Value>
+          </Object> <!-- type="StepDeploymentInfo"-->
+          <Key>N7</Key>
+          <Object type="StepDeploymentInfo" oid="Persist::oid7__612_StepDeploymentInfo" version="7">
+            <Value>0</Value>
+            <Value>Send Envelope</Value>
+            <Value>N7</Value>
+            <Value>Design Server</Value>
+            <Value>Create_and_Send_EDI_Document.Create_and_Send_EDI_Document.Design_Server:Send_Envelope</Value>
+            <Value>wm.b2b.editn.sample.sender:SendEnvelope</Value>
+            <Value>false</Value>
+            <Value></Value>
+            <Value></Value>
+            <Value>^_null_^</Value>
+            <Map>
+            </Map>
+            <Map>
+            </Map>
+            <Value>1</Value>
+          </Object> <!-- type="StepDeploymentInfo"-->
+          <Key>N2</Key>
+          <Object type="StepDeploymentInfo" oid="Persist::oid7__60f_StepDeploymentInfo" version="7">
+            <Value>0</Value>
+            <Value>Wait for Technical Acknowledgement</Value>
+            <Value>N2</Value>
+            <Value>Design Server</Value>
+            <Value>Create_and_Send_EDI_Document.Create_and_Send_EDI_Document.Design_Server:Wait_for_Technical_Acknowledgement</Value>
+            <Value>wm.b2b.editn.sample.util:convertToCM</Value>
+            <Value>false</Value>
+            <Value></Value>
+            <Value></Value>
+            <Value>^_null_^</Value>
+            <Map>
+              <Key>X12 Group</Key>
+              <Serialized>rO0ABXQAGFdNWDEyLTEtLS0tLUdST1VQLS0tLS0tLQ==</Serialized>
+            </Map>
+            <Map>
+            </Map>
+            <Value>1</Value>
+          </Object> <!-- type="StepDeploymentInfo"-->
+          <Key>N5</Key>
+          <Object type="StepDeploymentInfo" oid="Persist::oid7__611_StepDeploymentInfo" version="7">
+            <Value>0</Value>
+            <Value>Step</Value>
+            <Value>N5</Value>
+            <Value>Design Server</Value>
+            <Value>Create_and_Send_EDI_Document.Create_and_Send_EDI_Document.Design_Server:Step</Value>
+            <Value>pub.prt.admin:changeProcessStatus</Value>
+            <Value>false</Value>
+            <Value></Value>
+            <Value></Value>
+            <Value>^_null_^</Value>
+            <Map>
+            </Map>
+            <Map>
+            </Map>
+            <Value>1</Value>
+          </Object> <!-- type="StepDeploymentInfo"-->
+          <Key>N12</Key>
+          <Object type="StepDeploymentInfo" oid="Persist::oid7__60c_StepDeploymentInfo" version="7">
+            <Value>0</Value>
+            <Value>Wait for EDI Document</Value>
+            <Value>N12</Value>
+            <Value>Design Server</Value>
+            <Value>Create_and_Send_EDI_Document.Create_and_Send_EDI_Document.Design_Server:Wait_for_EDI_Document</Value>
+            <Value>^_null_^</Value>
+            <Value>false</Value>
+            <Value></Value>
+            <Value></Value>
+            <Value>^_null_^</Value>
+            <Map>
+            </Map>
+            <Map>
+            </Map>
+            <Value>1</Value>
+          </Object> <!-- type="StepDeploymentInfo"-->
+          <Key>N14</Key>
+          <Object type="StepDeploymentInfo" oid="Persist::oid7__60e_StepDeploymentInfo" version="7">
+            <Value>0</Value>
+            <Value>Acknowledge Receipt and Validity</Value>
+            <Value>N14</Value>
+            <Value>Design Server</Value>
+            <Value>Create_and_Send_EDI_Document.Create_and_Send_EDI_Document.Design_Server:Acknowledge_Receipt_and_Validity</Value>
+            <Value>^_null_^</Value>
+            <Value>false</Value>
+            <Value></Value>
+            <Value></Value>
+            <Value>^_null_^</Value>
+            <Map>
+            </Map>
+            <Map>
+            </Map>
+            <Value>1</Value>
+          </Object> <!-- type="StepDeploymentInfo"-->
+          <Key>N10</Key>
+          <Object type="StepDeploymentInfo" oid="Persist::oid7__60a_StepDeploymentInfo" version="7">
+            <Value>0</Value>
+            <Value>Generate EDI Envelope</Value>
+            <Value>N10</Value>
+            <Value>Design Server</Value>
+            <Value>Create_and_Send_EDI_Document.Create_and_Send_EDI_Document.Design_Server:Generate_EDI_Envelope</Value>
+            <Value>^_null_^</Value>
+            <Value>false</Value>
+            <Value></Value>
+            <Value></Value>
+            <Value>^_null_^</Value>
+            <Map>
+            </Map>
+            <Map>
+            </Map>
+            <Value>1</Value>
+          </Object> <!-- type="StepDeploymentInfo"-->
+          <Key>N13</Key>
+          <Object type="StepDeploymentInfo" oid="Persist::oid7__60d_StepDeploymentInfo" version="7">
+            <Value>0</Value>
+            <Value>Validate Envelope</Value>
+            <Value>N13</Value>
+            <Value>Design Server</Value>
+            <Value>Create_and_Send_EDI_Document.Create_and_Send_EDI_Document.Design_Server:Validate_Envelope</Value>
+            <Value>^_null_^</Value>
+            <Value>false</Value>
+            <Value></Value>
+            <Value></Value>
+            <Value>^_null_^</Value>
+            <Map>
+            </Map>
+            <Map>
+            </Map>
+            <Value>1</Value>
+          </Object> <!-- type="StepDeploymentInfo"-->
+        </Map>
+        <Map>
+          <Key>X12 Group</Key>
+          <Serialized>rO0ABXQADURlc2lnbiBTZXJ2ZXI=</Serialized>
+          <Key>EDI Sample Envelope</Key>
+          <Serialized>rO0ABXQADURlc2lnbiBTZXJ2ZXI=</Serialized>
+        </Map>
+        <Map>
+          <Key>Design Server</Key>
+          <Serialized>rO0ABXQAMkNyZWF0ZV9hbmRfU2VuZF9FRElfRG9jdW1lbnQuRGVzaWduX1NlcnZlcjp0cmlnZ2Vy</Serialized>
+        </Map>
+        <Value>Create_and_Send_EDI_Document</Value>
+        <Map>
+          <Key>Design Server</Key>
+          <Serialized>rO0ABXQASkNyZWF0ZV9hbmRfU2VuZF9FRElfRG9jdW1lbnQuY29uZmlnLndtcHJ0OlAyNjYxNzE0Njg2MzQ0LkRlc2lnbl9TZXJ2ZXIueG1s</Serialized>
+        </Map>
+        <Value>1150929066518</Value>
+        <Array>
+        </Array>
+        <Map>
+        </Map>
+        <Map>
+          <Key>WMX12-1-----GROUP-------</Key>
+          <Serialized>rO0ABXQADURlc2lnbiBTZXJ2ZXI=</Serialized>
+          <Key>0a01359cf70da6f000000498</Key>
+          <Serialized>rO0ABXQADURlc2lnbiBTZXJ2ZXI=</Serialized>
+        </Map>
+        <Map>
+        </Map>
+      </Object> <!-- type="ProcessDeploymentInfo"-->
+      <Value>2006-06-21 18:31:09.172</Value>
+      <Object type="PersistentReference" oid="Persist::oid5__522_PersistentReference" version="2">
+        <Value>0</Value>
+        <Value>Persist::oid5__53d_BusinessProcess</Value>
+        <Value>^_null_^</Value>
+        <Value>0</Value>
+        <Value>^_null_^</Value>
+        <Value>false</Value>
+      </Object> <!-- type="PersistentReference"-->
+      <Object type="PersistentReference" oid="Persist::oid5__517_PersistentReference" version="2">
+        <Value>0</Value>
+        <Value>Persist::oid5__53d_BusinessProcess</Value>
+        <Value>^_null_^</Value>
+        <Value>0</Value>
+        <Value>^_null_^</Value>
+        <Value>false</Value>
+      </Object> <!-- type="PersistentReference"-->
+      <Value></Value>
+      <Array>
+        <Value>Buyer</Value>
+        <Value>Seller</Value>
+        <Value>Focal role</Value>
+      </Array>
+      <Object type="DataItem" oid="Persist::oid5__54c_DataItem" version="5">
+        <Value>0</Value>
+        <Value>Buyer</Value>
+        <Object type="PersistentReference" oid="Persist::oid5__54e_PersistentReference" version="2">
+          <Value>0</Value>
+          <Value>Persist::oid5__54c_DataItem</Value>
+          <Value>^_null_^</Value>
+          <Value>0</Value>
+          <Value>^_null_^</Value>
+          <Value>false</Value>
+        </Object> <!-- type="PersistentReference"-->
+        <Value>304</Value>
+        <Value>^_null_^</Value>
+        <Value>0</Value>
+        <Value>Design Server</Value>
+        <Value>^_null_^</Value>
+        <Value>^_null_^</Value>
+        <Value></Value>
+        <Value></Value>
+      </Object> <!-- type="DataItem"-->
+      <Object type="DataItem" oid="Persist::oid5__57c_DataItem" version="5">
+        <Value>0</Value>
+        <Value>Seller</Value>
+        <Object type="PersistentReference" oid="Persist::oid5__551_PersistentReference" version="2">
+          <Value>0</Value>
+          <Value>Persist::oid5__57c_DataItem</Value>
+          <Value>^_null_^</Value>
+          <Value>0</Value>
+          <Value>^_null_^</Value>
+          <Value>false</Value>
+        </Object> <!-- type="PersistentReference"-->
+        <Value>304</Value>
+        <Value>^_null_^</Value>
+        <Value>0</Value>
+        <Value>Design Server</Value>
+        <Value>^_null_^</Value>
+        <Value>^_null_^</Value>
+        <Value></Value>
+        <Value></Value>
+      </Object> <!-- type="DataItem"-->
+      <Object type="DataItem" oid="Persist::oid5__bc1_DataItem" version="5">
+        <Value>0</Value>
+        <Value>Focal role</Value>
+        <Object type="PersistentReference" oid="Persist::oid5__bc2_PersistentReference" version="2">
+          <Value>0</Value>
+          <Value>Persist::oid5__bc1_DataItem</Value>
+          <Value>^_null_^</Value>
+          <Value>0</Value>
+          <Value>^_null_^</Value>
+          <Value>false</Value>
+        </Object> <!-- type="PersistentReference"-->
+        <Value>304</Value>
+        <Value>^_null_^</Value>
+        <Value>0</Value>
+        <Value>Design Server</Value>
+        <Value>^_null_^</Value>
+        <Value>^_null_^</Value>
+        <Value></Value>
+        <Value></Value>
+      </Object> <!-- type="DataItem"-->
+      <Value>Create_and_Send_EDI_Document</Value>
+      <Value>false</Value>
+      <Value>true</Value>
+      <Value>false</Value>
+      <Value>false</Value>
+      <Value>false</Value>
+      <Value>5</Value>
+      <Map>
+      </Map>
+      <Map>
+      </Map>
+      <List>
+      </List>
+      <Value>0</Value>
+      <Value>true</Value>
+      <Value>false</Value>
+      <List>
+      </List>
+      <Value>1</Value>
+      <Value></Value>
+      <Value>false</Value>
+      <Value>0</Value>
+    </Object> <!-- type="BusinessProcess"-->
+    <Object modified="Administrator^|^1150924166502" creator="Administrator" type="NamedVector" oid="Persist::named::BusinessProcesses" version="1">
+      <Value>3</Value>
+      <Value>1</Value>
+      <List>
+        <Object type="PersistentReference" oid="Persist::oid5__586_PersistentReference" version="2">
+          <Value>0</Value>
+          <Value>Persist::named::BusinessProcesses</Value>
+          <Value>Persist::oid5__53d_BusinessProcess</Value>
+          <Value>1</Value>
+          <Value>Create_and_Send_EDI_Document</Value>
+          <Value>true</Value>
+        </Object> <!-- type="PersistentReference"-->
+      </List>
+      <Object type="PersistentReference" oid="Persist::oid1__2_PersistentReference" version="2">
+        <Value>0</Value>
+        <Value>Persist::oid1__1_NamedVector</Value>
+        <Value>^_null_^</Value>
+        <Value>1</Value>
+        <Value>^_null_^</Value>
+        <Value>false</Value>
+      </Object> <!-- type="PersistentReference"-->
+      <Value>BusinessProcesses</Value>
+    </Object> <!-- type="NamedVector"-->
+  </List>
+</Object> <!-- type="persist.ExportWrapper"-->

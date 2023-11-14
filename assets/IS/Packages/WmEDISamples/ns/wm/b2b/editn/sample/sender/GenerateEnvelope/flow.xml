@@ -1,0 +1,1348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<FLOW VERSION="3.0" CLEANUP="true">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<INVOKE TIMEOUT="" SERVICE="wm.b2b.editn.sample.util:getBizDocFromEvent" VALIDATE-IN="$none" VALIDATE-OUT="$none" DISABLED="true">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+</MAP>
+
+<MAP MODE="OUTPUT">
+</MAP>
+</INVOKE>
+
+<INVOKE TIMEOUT="" SERVICE="pub.string:bytesToString" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_name">bytesToStringInput</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">bytes</value>
+        <value name="field_type">object</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">encoding</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <value name="nillable">true</value>
+      </record>
+    </array>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">bizEnv</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="rec_ref">wm.tn.rec:BizDocEnvelope</value>
+      </record>
+    </array>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPCOPY NAME="Link" FROM="/bizEnv;4;0;wm.tn.rec:BizDocEnvelope/Content;3;0" TO="/bytes;3;0">
+</MAPCOPY>
+</MAP>
+
+<MAP MODE="OUTPUT">
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">bytes</value>
+        <value name="field_type">object</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">bizEnv</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="rec_ref">wm.tn.rec:BizDocEnvelope</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">string</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+    </array>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_name">bytesToStringOutput</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <list name="rec_fields">
+    </list>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPDELETE NAME="Dropper" FIELD="/bytes;3;0">
+</MAPDELETE>
+
+<MAPDELETE NAME="Dropper" FIELD="/bizEnv;4;0;wm.tn.rec:BizDocEnvelope">
+</MAPDELETE>
+</MAP>
+</INVOKE>
+
+<INVOKE TIMEOUT="" SERVICE="pub.web:stringToDocument" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <list name="rec_fields">
+    </list>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <list name="rec_fields">
+    </list>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPCOPY NAME="Link" FROM="/string;1;0" TO="/xmldata;1;0">
+</MAPCOPY>
+</MAP>
+
+<MAP MODE="OUTPUT">
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <list name="rec_fields">
+    </list>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <list name="rec_fields">
+    </list>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPDELETE NAME="Dropper" FIELD="/string;1;0">
+</MAPDELETE>
+
+<MAPDELETE NAME="Dropper" FIELD="/xmldata;1;0">
+</MAPDELETE>
+</MAP>
+</INVOKE>
+
+<INVOKE TIMEOUT="" SERVICE="pub.web:documentToRecord" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+</MAP>
+
+<MAP MODE="OUTPUT">
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">node</value>
+        <value name="field_type">object</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">boundNode</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <array name="rec_fields" type="record" depth="1">
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">record</value>
+            <value name="field_name">EDIPO</value>
+            <value name="field_type">recref</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">true</value>
+            <value name="rec_ref">wm.b2b.editn.sample.rec:EDI_PO</value>
+          </record>
+        </array>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">EDI_PO</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="rec_ref">wm.b2b.editn.sample.rec:EDI_PO</value>
+      </record>
+    </array>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_name">documentToRecordOutput</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">boundNode</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <array name="rec_fields" type="record" depth="1">
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">record</value>
+            <value name="field_name">EDIPO</value>
+            <value name="field_type">recref</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">true</value>
+            <value name="rec_ref">wm.b2b.editn.sample.rec:EDI_PO</value>
+          </record>
+        </array>
+      </record>
+    </array>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPDELETE NAME="Dropper" FIELD="/node;3;0">
+</MAPDELETE>
+
+<MAPCOPY NAME="Link" FROM="/boundNode;2;0/EDIPO;4;0;wm.b2b.editn.sample.rec:EDI_PO" TO="/EDI_PO;4;0;wm.b2b.editn.sample.rec:EDI_PO">
+</MAPCOPY>
+
+<MAPDELETE NAME="Dropper" FIELD="/boundNode;2;0">
+</MAPDELETE>
+</MAP>
+</INVOKE>
+
+<MAP MODE="STANDALONE">
+  <COMMENT></COMMENT>
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">EDI_PO</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="rec_ref">wm.b2b.editn.sample.rec:EDI_PO</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">SenderDuns</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">ReceiverDuns</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">EDI_Envelope</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="rec_ref">wm.b2b.editn.sample.rec:EDI_Envelope</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">CID</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+    </array>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">EDI_PO</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="rec_ref">wm.b2b.editn.sample.rec:EDI_PO</value>
+      </record>
+    </array>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPINVOKE SERVICE="wm.tn.profile:getExternalID" VALIDATE-IN="$none" VALIDATE-OUT="$none" INVOKE-ORDER="0">
+
+  <!-- nodes -->
+
+<MAP MODE="INVOKEINPUT">
+
+  <!-- nodes -->
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" FIELD="/idTypeDesc;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">DUNS</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">unknown</value>
+    <value name="field_name">idTypeDesc</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">true</value>
+    <value name="nillable">true</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPCOPY NAME="Link" FROM="/EDI_PO;4;0;wm.b2b.editn.sample.rec:EDI_PO/SenderID;1;0" TO="/partnerID;1;0">
+</MAPCOPY>
+</MAP>
+
+<MAP MODE="INVOKEOUTPUT">
+
+  <!-- nodes -->
+
+<MAPCOPY NAME="Link" FROM="/id;1;0" TO="/SenderDuns;1;0">
+</MAPCOPY>
+</MAP>
+</MAPINVOKE>
+
+<MAPINVOKE SERVICE="wm.tn.profile:getExternalID" INVOKE-ORDER="0">
+
+  <!-- nodes -->
+
+<MAP MODE="INVOKEINPUT">
+
+  <!-- nodes -->
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" FIELD="/idTypeDesc;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">DUNS</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">unknown</value>
+    <value name="field_name">idTypeDesc</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">true</value>
+    <value name="nillable">true</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPCOPY NAME="Link" FROM="/EDI_PO;4;0;wm.b2b.editn.sample.rec:EDI_PO/ReceiverID;1;0" TO="/partnerID;1;0">
+</MAPCOPY>
+</MAP>
+
+<MAP MODE="INVOKEOUTPUT">
+
+  <!-- nodes -->
+
+<MAPCOPY NAME="Link" FROM="/id;1;0" TO="/ReceiverDuns;1;0">
+</MAPCOPY>
+</MAP>
+</MAPINVOKE>
+
+<MAPCOPY NAME="Link" FROM="/EDI_PO;4;0;wm.b2b.editn.sample.rec:EDI_PO/SenderID;1;0" TO="/EDI_Envelope;4;0;wm.b2b.editn.sample.rec:EDI_Envelope/SenderID;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/EDI_PO;4;0;wm.b2b.editn.sample.rec:EDI_PO/ReceiverID;1;0" TO="/EDI_Envelope;4;0;wm.b2b.editn.sample.rec:EDI_Envelope/ReceiverID;1;0">
+</MAPCOPY>
+
+<MAPINVOKE SERVICE="wm.b2b.edi.util:pad" INVOKE-ORDER="0">
+
+  <!-- nodes -->
+
+<MAP MODE="INVOKEINPUT">
+
+  <!-- nodes -->
+
+<MAPCOPY NAME="Link" FROM="/EDI_PO;4;0;wm.b2b.editn.sample.rec:EDI_PO/ControlNumber;1;0" TO="/input;1;0">
+</MAPCOPY>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" FIELD="/length;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">9</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">unknown</value>
+    <value name="field_name">length</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" FIELD="/from;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">left</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">unknown</value>
+    <value name="field_name">from</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">true</value>
+    <array name="field_options" type="value" depth="1">
+      <value>left</value>
+      <value>right</value>
+      <value>no</value>
+    </array>
+    <value name="nillable">true</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+</MAP>
+
+<MAP MODE="INVOKEOUTPUT">
+
+  <!-- nodes -->
+
+<MAPCOPY NAME="Link" FROM="/result;1;0" TO="/EDI_Envelope;4;0;wm.b2b.editn.sample.rec:EDI_Envelope/DocumentID;1;0">
+</MAPCOPY>
+</MAP>
+</MAPINVOKE>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="true" FIELD="/CID;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">%EDI_PO/SenderID%-%EDI_PO/ReceiverID%-%EDI_PO/ControlNumber%</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_name">CID</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+</MAP>
+
+<INVOKE SERVICE="wm.b2b.edi.util:controlNumber">
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+</MAP>
+
+<MAP MODE="OUTPUT">
+</MAP>
+</INVOKE>
+
+<MAP MODE="STANDALONE">
+  <COMMENT></COMMENT>
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">EDI_Envelope</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="rec_ref">wm.b2b.editn.sample.rec:EDI_Envelope</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">CID</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+    </array>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">EDI_PO</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="rec_ref">wm.b2b.editn.sample.rec:EDI_PO</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">SenderDuns</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">ReceiverDuns</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">EDI_Envelope</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="rec_ref">wm.b2b.editn.sample.rec:EDI_Envelope</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">ctlNumber</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+    </array>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPDELETE NAME="Dropper" FIELD="/EDI_PO;4;0;wm.b2b.editn.sample.rec:EDI_PO">
+</MAPDELETE>
+
+<MAPDELETE NAME="Dropper" FIELD="/SenderDuns;1;0">
+</MAPDELETE>
+
+<MAPDELETE NAME="Dropper" FIELD="/ReceiverDuns;1;0">
+</MAPDELETE>
+
+<MAPDELETE NAME="Dropper" FIELD="/ctlNumber;1;0">
+</MAPDELETE>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="true" FIELD="/EDI_Envelope;4;0;wm.b2b.editn.sample.rec:EDI_Envelope/edidata;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">ISA*00*          *00*          *01*%SenderDuns%      *01*%ReceiverDuns%      *001206*1107*U*00200*%ctlNumber%*1*T*:!
+GS*PO*%SenderDuns%   *%ReceiverDuns%   *001206*1107*%/EDI_Envelope/DocumentID%*T*004010!
+ST*850*0001!
+BEG*01*BK*%/EDI_PO/DocumentID%*39483920193843*20001206*AN3920943*AC*IBM*02*AE*02*BA!
+CUR*AC*USA*.2939*SE*USA*IMF*002*20001206*1615*021*20001206*0718*038*20001206*1952*002*20001206*1615*021*20001206*0718!
+REF*AB*3920394930203*GENERAL PURPOSE*BT:12345678900987654321768958473:CM:500:AB:3920394930203!
+PER*AC*ARTHUR JONES*TE*(614)555-1212*TE*(614)555-1212*TE*(614)555-1212*ADDL CONTACT DESC!
+TAX*229438383*IP*02535*IP*36201*IP*36299*IP*02535*IP*36201*A*C!
+FOB*CA*IP*GENERAL PURPOSE*01*CAF*IP*GENERAL PURPOSE*BY*GENERAL PURPOSE!
+CTP*AG*ALT*100.00*100*DP:1331351231:10.938:HB:1365660496:.29384:QD:1426884671:.05029:DP:1377303216:10.938:HB:17658085:.29384*CSD*.05029*100.00*PD*MILES*10!
+PAM*01*.500*QD:884774706:10.938:DP:1229362348:.29384:HB:938961408:.05029:QD:435093772:10.938:DP:1206995683:.29384*AC*50.00*DA*038*20001206*1952*002*20001206*1615*1*10.25*N!
+CSH*B*A*10000*ACCT0001*20001206*AX*DL*B0*20.00*1!
+TC2*A*SBEANS!
+SAC*A*A010*AA*1*50000*1*.25*5000*HB*123.45*100*01*12345678900987654321768958473*PROMO292910*GENERAL PURPOSE*ENG!
+CUR*BK*USA*1.259*AC*USA*LNF*021*20001206*0718*038*20001206*1952*002*20001206*1615*021*20001206*0718*038*20001206*1952!
+ITD*01*1*.0035*20001206*60*20001206*10*1000*20001206*10000*.25*GENERAL PURPOSE*1*C*50.75!
+DIS*AMT*CA*10*DOF*1000*4200!
+INC*03*QD:80793289:.05029:DP:1401317972:10.938:HB:700949207:.29384:QD:1011602510:.05029:DP:163453884:10.938*.500*123.45*665.75!
+DTM*002*20001206*1615*CT*CM*DATE TIME PERIOD!
+LDT*AA*100*HR*20001206!
+LIN*AAA849*AB*ASSEMBLY*BL*BRAND OR LABEL*ON*CUST12345*AB*ASSEMBLY*BL*BRAND OR LABEL*ON*CUST12345*AB*ASSEMBLY*BL*BRAND OR LABEL*ON*CUST12345*AB*ASSEMBLY*BL*BRAND OR LABEL*ON*CUST12345*AB*ASSEMBLY*BL*BRAND OR LABEL*ON*CUST12345!
+SI*NR*SR*ASSEMBLY*SR*BRAND OR LABEL*SR*CUST12345*SR*ASSEMBLY*SR*BRAND OR LABEL*SR*CUST12345*SR*ASSEMBLY*SR*BRAND OR LABEL*SR*CUST12345*SR*ASSEMBLY!
+PID*F*BC*AX*UNSCENTED*GENERAL PURPOSE*BS*SUBQUALIFIER*N*ENG!
+MEA*AA*A*1920.192*HB:449191474:.29384:QD:1683352965:.05029:DP:26569086:10.938:HB:1767590076:.29384:QD:1036389003:.05029*11.00*200*01*01*OS*BM!
+PWK*AA*AE*1*SE*1*9012345918341*GENERAL PURPOSE*1:2:1:2:1*AR!
+PKG*F*10*AA*MARKED*GENERAL PURPOSE*01!
+TD1*BAG07*1234567*B*SBEANS*ONE OUNCE WIDGETS*A*12345678*DP*40*HB!
+TD5*A*8*111222333*A*ROUTING INFORMATION*AB*IP*36299*BS*AA*4230*AC*NM*ON*US!
+TD3*CR*AAAA*EQ48495*T*50*QD*N*01*30394938483234*CART!
+TD4*BW*4*AC*GENERAL PURPOSE*N!
+MAN*GM*III789384839*MKD29393812910*L*3939348930IDKDLSIA*III789384839!
+PCT*1*10.25!
+CTB*AA*GENERAL PURPOSE*28*.500*FL*100000!
+TXI*ST*100.00*20.00*CD*TAX JRSDCT*1*A*100.00*33939483921*888394!
+AMT*NP*50.00*C!
+REF*BT*500*GENERAL PURPOSE*CM:3920394930203:AB:12345678900987654321768958473:BT:500!
+DTM*021*20001206*0718*MT*MM*DATE TIME PERIOD!
+PCT*1*50.75!
+FA1*NR*A020*C!
+FA2*01*FINANCIAL INFORMATION CODE!
+N9*CM*3920394930203*FREE FORM DESCRIPTION*20001206*1952*PT*AB:12345678900987654321768958473:BT:500:CM:3920394930203!
+DTM*038*20001206*1615*CT*YM*DATE TIME PERIOD!
+MSG*FREE FORM MESSAGE TEXT*DS*429949652!
+N1*BK*MAGGIE MCGILLICUTTY*16*43202*11*AC!
+N2*BEVERLY SIMPSON*ARTHUR JONES!
+N3*PO BOX 123*157 WEST 57TH STREET!
+N4*CINCINNATI*OH*43017*US*IP*02535!
+NX2*01*103 NORTH MAIN STREET*95391!
+REF*AB*12345678900987654321768958473*GENERAL PURPOSE*BT:500:CM:3920394930203:AB:12345678900987654321768958473!
+PER*CR*MAGGIE MCGILLICUTTY*TE*(614)555-1212*TE*(614)555-1212*TE*(614)555-1212*ADDL CONTACT DESC!
+SI*AX*SR*BRAND OR LABEL*SR*CUST12345*SR*ASSEMBLY*SR*BRAND OR LABEL*SR*CUST12345*SR*ASSEMBLY*SR*BRAND OR LABEL*SR*CUST12345*SR*ASSEMBLY*SR*BRAND OR LABEL!
+FOB*PA*IP*GENERAL PURPOSE*02*CIF*IP*GENERAL PURPOSE*FE*GENERAL PURPOSE!
+TD1*BBL94*50*C*SBEANS*FIFTEEN POUND WIDGETS*B*40*DP*400*HB!
+TD5*B*1*9012345918341*U*ROUTING INFORMATION*CO*IP*36201*SB*HO*7450*AC*NM*ON*US!
+TD3*HV*AKEI*EQ12349*A*12345678*QD*R*03*394899111098456*CART!
+TD4*SM*A*PS*GENERAL PURPOSE*N!
+PKG*F*37*AA*MARKED*GENERAL PURPOSE*03!
+LM*NR*SUBQUALIFIER!
+LQ*2*INDUSTRY CODE!
+SPI*03*BT*500*TITLE OF THE DATA ENTITY*ENTITY PURPOSE*A*10*BL*09*AX*SUBQUALIFIER*293212*I*AA*0001!
+REF*CM*3920394930203*GENERAL PURPOSE*AB:12345678900987654321768958473:BT:500:CM:3920394930203!
+DTM*002*20001206*0718*MT*CM*DATE TIME PERIOD!
+MSG*FREE FORM MESSAGE TEXT*LC*687532619!
+N1*SE*BEVERLY SIMPSON*8*111222333*13*BK!
+N2*ARTHUR JONES*MAGGIE MCGILLICUTTY!
+N3*PO BOX 123*157 WEST 57TH STREET!
+N4*COLUMBUS*OH*43017*US*IP*36299!
+REF*AB*12345678900987654321768958473*GENERAL PURPOSE*BT:500:CM:3920394930203:AB:12345678900987654321768958473!
+G61*EX*BEVERLY SIMPSON*TE*(614)555-1212*ADDL CONTACT DESC!
+MSG*FREE FORM MESSAGE TEXT*NP*181541230!
+CB1*07*A!
+REF*BT*500*GENERAL PURPOSE*CM:3920394930203:AB:12345678900987654321768958473:BT:500!
+DTM*021*20001206*1952*PT*MM*DATE TIME PERIOD!
+LDT*AF*123.45*WK*20001206!
+MSG*FREE FORM MESSAGE TEXT*DS*851750821!
+ADV*AA*SR*100.00*150.25*CT9392*SR*119291.223!
+DTM*038*20001206*1615*CT*YM*DATE TIME PERIOD!
+MTX*ALL*MESSAGE TEXT*MESSAGE TEXT*LC!
+PO1*3ALDKF*100*DP*123.90*LE*AB*CUST12345*BL*ASSEMBLY*ON*BRAND OR LABEL*AB*CUST12345*BL*ASSEMBLY*ON*BRAND OR LABEL*AB*CUST12345*BL*ASSEMBLY*ON*BRAND OR LABEL*AB*CUST12345!
+LIN*AAA849*BL*ASSEMBLY*ON*BRAND OR LABEL*AB*CUST12345*BL*ASSEMBLY*ON*BRAND OR LABEL*AB*CUST12345*BL*ASSEMBLY*ON*BRAND OR LABEL*AB*CUST12345*BL*ASSEMBLY*ON*BRAND OR LABEL*AB*CUST12345*BL*ASSEMBLY*ON*BRAND OR LABEL*AB*CUST12345!
+SI*NR*SR*ASSEMBLY*SR*BRAND OR LABEL*SR*CUST12345*SR*ASSEMBLY*SR*BRAND OR LABEL*SR*CUST12345*SR*ASSEMBLY*SR*BRAND OR LABEL*SR*CUST12345*SR*ASSEMBLY!
+CUR*AC*USA*4.5948*SE*USA*NYC*002*20001206*0718*021*20001206*1952*038*20001206*1615*002*20001206*0718*021*20001206*1952!
+CN1*04*665.75*.10*3920394930203*.25*VERSION IDENTIFIER!
+PO3*AQ*20001206*MNR*5400.50*RD*100*HB*GENERAL PURPOSE!
+CTP*BR*SLP*100.00*.500*QD:1475592472:10.938:DP:117095006:.29384:HB:383639665:.05029:QD:1330500081:10.938:DP:197491836:.29384*CSR*.05029*100.00*PD*MILES*13!
+CUR*BK*USA*.2939*AC*USA*IMF*038*20001206*1615*002*20001206*0718*021*20001206*1952*038*20001206*1615*002*20001206*0718!
+PAM*43*123.45*HB:1576779124:10.938:QD:1140142041:.29384:DP:1716130343:.05029:HB:1941627010:10.938:QD:1230038733:.29384*AC*50.00*DA*021*20001206*1952*038*20001206*1615*1*10.25*N!
+MEA*CO*BE*500*DP:1816467893:.05029:HB:914749429:10.938:QD:1053029396:.29384:DP:461732326:.05029:HB:202221448:10.938*50*201.20*03*03*TP*BM!
+PID*F*10*AX*UNSCENTED*GENERAL PURPOSE*BS*SUBQUALIFIER*N*ENG!
+MEA*BA*CA*1920.192*QD:195727011:.29384:DP:70812469:.05029:HB:431265727:10.938:QD:1138263576:.29384:DP:604562113:.05029*11.00*200*07*06*OS*BM!
+PWK*DR*BM*2*SE*16*43202*GENERAL PURPOSE*2:1:2:1:2*AR!
+PO4*24*12*HB*PLT37*T*100*QD*100*DP*45*50*123456*HB*21*TP*888394*3ALDKF*632596243!
+REF*CM*12345678900987654321768958473*GENERAL PURPOSE*AB:500:BT:3920394930203:CM:12345678900987654321768958473!
+PER*AC*ARTHUR JONES*TE*(614)555-1212*TE*(614)555-1212*TE*(614)555-1212*ADDL CONTACT DESC!
+SAC*N*A030*AA*ABC60*10000*3*.15*450000*QD*100*.500*01*500*PR939201*GENERAL PURPOSE*ENG!
+CUR*BK*USA*1.259*AC*USA*LNF*002*20001206*0718*021*20001206*1952*038*20001206*1615*002*20001206*0718*021*20001206*1952!
+CTP*GV*ALT*123.90*123.45*DP:1154916830:10.938:HB:904547205:.29384:QD:648788858:.05029:DP:241891633:10.938:HB:743304164:.29384*ILP*.05029*665.75*LE*MILES*14!
+IT8*F*D*50000*182389281*20001206*NR*B2*BL*BRAND OR LABEL*ON*CUST12345*AB*ASSEMBLY*BL*BRAND OR LABEL*ON*CUST12345*AB*ASSEMBLY*BL*BRAND OR LABEL*ON*CUST12345*AB*ASSEMBLY*BL*BRAND OR LABEL!
+CSH*W*E*100000*20934801*20001206*AX*D1*X*20.00*1!
+ITD*12*8*.0010*20001206*90*20001206*30*10000*20001206*50000*.10*GENERAL PURPOSE*15*E*50.75!
+DIS*CSH*PC*.0434*DAT*50*1000!
+INC*01*QD:651894799:10.938:DP:218709607:.29384:HB:1534748026:.05029:QD:1750505278:10.938:DP:143218891:.29384*100*.500*100.00!
+TAX*222948392034*IP*02535*IP*36201*IP*36299*IP*02535*IP*36201*2*C!
+FOB*PB*IP*GENERAL PURPOSE*ZZ*FAS*IP*GENERAL PURPOSE*PP*GENERAL PURPOSE!
+SDQ*HB*1*9012345918341*123.45*111222333*100*43202*.500*9012345918341*123.45*111222333*100*43202*.500*9012345918341*123.45*111222333*100*43202*.500*9012345918341*123.45*36299!
+IT3*100*QD*IC*100*GU!
+DTM*038*20001206*1615*MT*CM*DATE TIME PERIOD!
+TC2*A*SBEANS!
+TD1*BAG07*100*B*SBEANS*CUBIC YARD WIDGETS IN VARIOUS*B*50*DP*4000*HB!
+TD5*I*8*111222333*M*ROUTING INFORMATION*AB*IP*02535*SS*WD*9500*AC*NM*ON*US!
+TD3*LO*IIBL*EQ8373A*A*40*QD*S*04*39483920294*CART!
+TD4*TSC*U*SN*GENERAL PURPOSE*N!
+PCT*1*10.25!
+MAN*SM*MKD29393812910*3939348930IDKDLSIA*GM*III789384839*MKD29393812910!
+MSG*FREE FORM MESSAGE TEXT*NP*349834659!
+SPI*02*AB*3920394930203*TITLE OF THE DATA ENTITY*ENTITY PURPOSE*D*12*AA*03*AA*SUBQUALIFIER*100*R*AA*0002!
+TXI*FT*50.00*20.00*VE*TAX JRSDCT*A*D*450.00*229438383*AAA849!
+CTB*AA*GENERAL PURPOSE*01*100*FL*10000!
+QTY*28*.500*DP:1416510956:.05029:HB:1822859449:10.938:QD:1665377950:.29384:DP:274249040:.05029:HB:1838527359:10.938*FREE FORM MESSAGE!
+SI*NR*SR*CUST12345*SR*ASSEMBLY*SR*BRAND OR LABEL*SR*CUST12345*SR*ASSEMBLY*SR*BRAND OR LABEL*SR*CUST12345*SR*ASSEMBLY*SR*BRAND OR LABEL*SR*CUST12345!
+SCH*123.45*QD*SE*MAGGIE MCGILLICUTTY*002*20001206*0718*021*20001206*1952*39349382*888394!
+TD1*BBL94*1234567*C*SBEANS*ONE OUNCE WIDGETS*T*12345678*DP*40*HB!
+TD5*A*16*43202*A*ROUTING INFORMATION*CO*IP*36201*BS*AA*4230*AC*NM*ON*US!
+TD3*CR*AAAA*EQ48495*B*50*QD*N*01*30394938483234*CART!
+TD4*BW*4*AC*GENERAL PURPOSE*N!
+REF*BT*12345678900987654321768958473*GENERAL PURPOSE*CM:500:AB:3920394930203:BT:12345678900987654321768958473!
+PKG*F*63*AX*MARKED*GENERAL PURPOSE*05!
+MEA*AA*A*119291.223*DP:1563913259:.29384:HB:180465955:.05029:QD:1722821670:10.938:DP:641824052:.29384:HB:1782332374:.05029*100.00*150.25*01*01*BS*BM!
+LS*LDT!
+LDT*AS*100*HR*20001206!
+QTY*43*.500*QD:1026938776:10.938:DP:1872212244:.29384:HB:1960947073:.05029:QD:129671788:10.938:DP:1098062252:.29384*FREE FORM MESSAGE!
+MSG*FREE FORM MESSAGE TEXT*DS*970610226!
+REF*CM*500*GENERAL PURPOSE*AB:3920394930203:BT:12345678900987654321768958473:CM:500!
+LM*AA*SUBQUALIFIER!
+LQ*7*INDUSTRY CODE!
+LE*LDT!
+N9*AB*3920394930203*FREE FORM DESCRIPTION*20001206*1615*PT*BT:12345678900987654321768958473:CM:500:AB:3920394930203!
+DTM*038*20001206*0718*CT*MM*DATE TIME PERIOD!
+MEA*CO*BE*500*HB:305244447:.05029:QD:1047461833:10.938:DP:399356704:.29384:HB:786173228:.05029:QD:295019802:10.938*50*201.20*03*03*OS*BM!
+MSG*FREE FORM MESSAGE TEXT*LC*3498183!
+N1*BK*BEVERLY SIMPSON*1*9012345918341*19*AC!
+N2*ARTHUR JONES*MAGGIE MCGILLICUTTY!
+N3*103 NORTH MAIN STREET*PO BOX 123!
+N4*CLEVELAND*OH*43017*US*IP*36299!
+QTY*01*123.45*DP:199174721:.29384:HB:106258336:.05029:QD:613384011:10.938:DP:2090031908:.29384:HB:1936502153:.05029*FREE FORM MESSAGE!
+NX2*02*157 WEST 57TH STREET*23442!
+REF*BT*12345678900987654321768958473*GENERAL PURPOSE*CM:500:AB:3920394930203:BT:12345678900987654321768958473!
+PER*CR*BEVERLY SIMPSON*TE*(614)555-1212*TE*(614)555-1212*TE*(614)555-1212*ADDL CONTACT DESC!
+SI*NR*SR*ASSEMBLY*SR*BRAND OR LABEL*SR*CUST12345*SR*ASSEMBLY*SR*BRAND OR LABEL*SR*CUST12345*SR*ASSEMBLY*SR*BRAND OR LABEL*SR*CUST12345*SR*ASSEMBLY!
+DTM*002*20001206*1952*MT*YM*DATE TIME PERIOD!
+FOB*CA*IP*GENERAL PURPOSE*01*CAF*IP*GENERAL PURPOSE*BY*GENERAL PURPOSE!
+SCH*100*QD*SE*ARTHUR JONES*021*20001206*1615*038*20001206*0718*3948329*3ALDKF!
+TD1*PLT37*50*A*SBEANS*FIFTEEN POUND WIDGETS*A*40*DP*400*HB!
+TD5*B*8*111222333*U*ROUTING INFORMATION*IC*IP*02535*SB*HO*7450*AC*NM*ON*US!
+TD3*HV*AKEI*EQ12349*T*12345678*QD*R*03*394899111098456*CART!
+TD4*SM*A*PS*GENERAL PURPOSE*N!
+PKG*F*10*AX*MARKED*GENERAL PURPOSE*01!
+LDT*AA*.500*WK*20001206!
+MAN*L*3939348930IDKDLSIA*III789384839*SM*MKD29393812910*3939348930IDKDLSIA!
+QTY*28*123.45*DP:1139793171:10.938:HB:564444895:.29384:QD:1233713996:.05029:DP:1285921520:10.938:HB:494937299:.29384*FREE FORM MESSAGE!
+MSG*FREE FORM MESSAGE TEXT*NP*752882915!
+REF*CM*500*GENERAL PURPOSE*AB:3920394930203:BT:12345678900987654321768958473:CM:500!
+SLN*AAA849*888394*I*100*QD:1485822164:.05029:DP:1553403808:10.938:HB:678603730:.29384:QD:1909853884:.05029:DP:407028607:10.938*5400.50*RD*A*ON*BRAND OR LABEL*AB*CUST12345*BL*ASSEMBLY*ON*BRAND OR LABEL*AB*CUST12345*BL*ASSEMBLY*ON*BRAND OR LABEL*AB*CUST12345*BL*ASSEMBLY*ON*BRAND OR LABEL!
+MSG*FREE FORM MESSAGE TEXT*DS*248801797!
+SI*AA*SR*CUST12345*SR*ASSEMBLY*SR*BRAND OR LABEL*SR*CUST12345*SR*ASSEMBLY*SR*BRAND OR LABEL*SR*CUST12345*SR*ASSEMBLY*SR*BRAND OR LABEL*SR*CUST12345!
+PID*F*60*NR*UNSCENTED*GENERAL PURPOSE*TP*SUBQUALIFIER*N*ENG!
+PO3*QO*20001206*MNR*100.00*PD*.500*HB*GENERAL PURPOSE!
+TC2*B*SBEANS!
+ADV*AX*SR*11.00*200*ALUM*SR*1920.192!
+DTM*002*20001206*1952*PT*CM*DATE TIME PERIOD!
+CTP*AG*SLP*123.90*123.45*QD:921167882:.29384:DP:686165186:.05029:HB:113289539:10.938:QD:1215165294:.29384:DP:1920268443:.05029*CSD*10.938*665.75*LE*MILES*10!
+PAM*43*100*HB:826514065:.29384:QD:1593309588:.05029:DP:132322665:10.938:HB:154538805:.29384:QD:467373433:.05029*NP*100.00*DA*021*20001206*1615*038*20001206*0718*1*50.75*N!
+PO4*120*24*DP*BAG07*B*400*HB*24*QD*30*100*10*DP*12*BS*3ALDKF*AAA849*856424328!
+TAX*33939483921*IP*36201*IP*36299*IP*02535*IP*36201*IP*36299*1*C!
+N9*AB*3920394930203*FREE FORM DESCRIPTION*20001206*1952*CT*BT:12345678900987654321768958473:CM:500:AB:3920394930203!
+DTM*002*20001206*1615*MT*MM*DATE TIME PERIOD!
+MSG*FREE FORM MESSAGE TEXT*LC*347369858!
+SAC*A*A010*AA*AABBCCDDXX*50000*7*.25*10000*HB*.500*123.45*01*12345678900987654321768958473*19029342ALSL*GENERAL PURPOSE*ENG!
+CUR*BK*USA*4.5948*AC*USA*NYC*021*20001206*0718*038*20001206*1952*002*20001206*1615*021*20001206*0718*038*20001206*1952!
+CTP*BR*ALT*5400.50*100*QD:939339660:10.938:DP:522667518:.29384:HB:1586353875:.05029:QD:589615148:10.938:DP:711281564:.29384*CSR*.05029*50.00*RD*MILES*13!
+QTY*01*.500*HB:424449722:10.938:QD:961065656:.29384:DP:1061429793:.05029:HB:1794338888:10.938:QD:24817013:.29384*FREE FORM MESSAGE!
+SI*NR*SR*ASSEMBLY*SR*BRAND OR LABEL*SR*CUST12345*SR*ASSEMBLY*SR*BRAND OR LABEL*SR*CUST12345*SR*ASSEMBLY*SR*BRAND OR LABEL*SR*CUST12345*SR*ASSEMBLY!
+N1*SE*MAGGIE MCGILLICUTTY*16*43202*11*BK!
+N2*BEVERLY SIMPSON*ARTHUR JONES!
+N3*103 NORTH MAIN STREET*PO BOX 123!
+N4*CINCINNATI*OH*43017*US*IP*02535!
+NX2*07*157 WEST 57TH STREET*54178!
+REF*BT*500*GENERAL PURPOSE*CM:3920394930203:AB:12345678900987654321768958473:BT:500!
+PER*EX*MAGGIE MCGILLICUTTY*TE*(614)555-1212*TE*(614)555-1212*TE*(614)555-1212*ADDL CONTACT DESC!
+SI*AX*SR*BRAND OR LABEL*SR*CUST12345*SR*ASSEMBLY*SR*BRAND OR LABEL*SR*CUST12345*SR*ASSEMBLY*SR*BRAND OR LABEL*SR*CUST12345*SR*ASSEMBLY*SR*BRAND OR LABEL!
+AMT*AC*665.75*D!
+REF*CM*3920394930203*GENERAL PURPOSE*AB:12345678900987654321768958473:BT:500:CM:3920394930203!
+PCT*1*10.25!
+LM*AA*SUBQUALIFIER!
+LQ*9*INDUSTRY CODE!
+CTT*10*855*50*DP*4000*HB*GENERAL PURPOSE!
+AMT*FL*100.00*C!
+SE*196*0001!
+GE*1*%/EDI_PO/ControlNumber%!
+IEA*1*000000001!
+</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_name">edidata</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+</MAP>
+
+<INVOKE TIMEOUT="" SERVICE="pub.web:recordToDocument" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_name">recordToDocumentInput</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">attrPrefix</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">boundNode</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <array name="rec_fields" type="record" depth="1">
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">record</value>
+            <value name="field_name">EDI_Envelope</value>
+            <value name="field_type">recref</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">true</value>
+            <value name="rec_ref">wm.b2b.editn.sample.rec:EDI_Envelope</value>
+          </record>
+        </array>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">nsDecls</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <value name="nillable">true</value>
+        <list name="rec_fields">
+        </list>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">addHeader</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+          <value>true</value>
+          <value>false</value>
+        </array>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">encode</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+          <value>true</value>
+          <value>false</value>
+        </array>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">recordName</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">generateRequiredTags</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+          <value>false</value>
+          <value>true</value>
+        </array>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">enforceLegalXML</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+          <value>true</value>
+          <value>false</value>
+        </array>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">dtdHeaderInfo</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <value name="nillable">true</value>
+        <list name="rec_fields">
+        </list>
+      </record>
+    </array>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">EDI_Envelope</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="rec_ref">wm.b2b.editn.sample.rec:EDI_Envelope</value>
+      </record>
+    </array>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPCOPY NAME="Link" FROM="/EDI_Envelope;4;0;wm.b2b.editn.sample.rec:EDI_Envelope" TO="/boundNode;2;0/EDI_Envelope;4;0;wm.b2b.editn.sample.rec:EDI_Envelope">
+</MAPCOPY>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" FIELD="/recordName;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">wm.b2b.editn.sample.rec:EDI_Envelope</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">unknown</value>
+    <value name="field_name">recordName</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">true</value>
+    <value name="nillable">true</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+</MAP>
+
+<MAP MODE="OUTPUT">
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">EDI_Envelope</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="rec_ref">wm.b2b.editn.sample.rec:EDI_Envelope</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">boundNode</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <array name="rec_fields" type="record" depth="1">
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">record</value>
+            <value name="field_name">EDI_Envelope</value>
+            <value name="field_type">recref</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">true</value>
+            <value name="rec_ref">wm.b2b.editn.sample.rec:EDI_Envelope</value>
+          </record>
+        </array>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">recordName</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">xmldata</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+    </array>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_name">recordToDocumentOutput</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <list name="rec_fields">
+    </list>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPDELETE NAME="Dropper" FIELD="/boundNode;2;0">
+</MAPDELETE>
+
+<MAPDELETE NAME="Dropper" FIELD="/recordName;1;0">
+</MAPDELETE>
+
+<MAPDELETE NAME="Dropper" FIELD="/EDI_Envelope;4;0;wm.b2b.editn.sample.rec:EDI_Envelope">
+</MAPDELETE>
+</MAP>
+</INVOKE>
+
+<INVOKE TIMEOUT="" SERVICE="pub.web:stringToDocument" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+</MAP>
+
+<MAP MODE="OUTPUT">
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <list name="rec_fields">
+    </list>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <list name="rec_fields">
+    </list>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPDELETE NAME="Dropper" FIELD="/xmldata;1;0">
+</MAPDELETE>
+</MAP>
+</INVOKE>
+
+<SEQUENCE EXIT-ON="FAILURE" DISABLED="true">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<SEQUENCE TIMEOUT="" EXIT-ON="DONE" DISABLED="true">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<INVOKE TIMEOUT="" SERVICE="wm.tn.cm:getState" VALIDATE-IN="$none" VALIDATE-OUT="$none" DISABLED="true">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_name">getStateInput</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">cid</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">step</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <value name="nillable">true</value>
+      </record>
+    </array>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">CID</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">node</value>
+        <value name="field_type">object</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+    </array>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPCOPY NAME="Link" FROM="/CID;1;0" TO="/cid;1;0">
+</MAPCOPY>
+</MAP>
+
+<MAP MODE="OUTPUT">
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">cid</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">CID</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">node</value>
+        <value name="field_type">object</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">conversationState</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <list name="rec_fields">
+        </list>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">stepState</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <list name="rec_fields">
+        </list>
+      </record>
+    </array>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_name">getStateOutput</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <list name="rec_fields">
+    </list>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPDELETE NAME="Dropper" FIELD="/CID;1;0">
+</MAPDELETE>
+</MAP>
+</INVOKE>
+</SEQUENCE>
+
+<BRANCH TIMEOUT="" SWITCH="/conversationState" DISABLED="true">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<EXIT NAME="$default" FROM="$flow" SIGNAL="FAILURE" DISABLED="true" FAILURE-MESSAGE="Group level conversation with Conversation id %cid% already exists">
+  <COMMENT></COMMENT>
+</EXIT>
+
+<MAP NAME="$null" MODE="STANDALONE" DISABLED="true">
+  <COMMENT></COMMENT>
+</MAP>
+</BRANCH>
+</SEQUENCE>
+
+<INVOKE TIMEOUT="" SERVICE="wm.tn:receive" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+</MAP>
+
+<MAP MODE="OUTPUT">
+</MAP>
+</INVOKE>
+</FLOW>

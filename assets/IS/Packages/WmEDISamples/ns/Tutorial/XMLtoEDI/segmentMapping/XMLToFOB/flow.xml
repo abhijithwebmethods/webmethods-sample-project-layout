@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+ 
+<FLOW VERSION="3.0" CLEANUP="false">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<BRANCH TIMEOUT="" SWITCH="ShipPaymentMethod">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<SEQUENCE NAME="/.+/" TIMEOUT="" EXIT-ON="FAILURE">
+  <COMMENT>If ShipPaymentMethod is not null, map FOB segment.</COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="STANDALONE">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAPDELETE NAME="MapDelete" FIELD="/ShipPaymentMethod;1;0">
+</MAPDELETE>
+
+<MAPCOPY NAME="MapCopy" FROM="/ShipPaymentMethod;1;0" TO="/FOB;2;0/FOB01;2;0/code;1;0">
+</MAPCOPY>
+</MAP>
+
+<INVOKE TIMEOUT="" SERVICE="Tutorial.XMLtoEDI:appendSegment" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+
+  <!-- nodes -->
+
+<MAPCOPY NAME="MapCopy" FROM="/FOB;2;0" TO="/record;2;0">
+</MAPCOPY>
+</MAP>
+
+<MAP MODE="OUTPUT">
+
+  <!-- nodes -->
+
+<MAPDELETE NAME="MapDelete" FIELD="/record;2;0">
+</MAPDELETE>
+
+<MAPDELETE NAME="MapDelete" FIELD="/FOB;2;0">
+</MAPDELETE>
+</MAP>
+</INVOKE>
+
+<MAP MODE="STANDALONE">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAPCOPY NAME="MapCopy" FROM="/recordList;2;1" TO="/FOB;2;1">
+</MAPCOPY>
+
+<MAPDELETE NAME="MapDelete" FIELD="/recordList;2;1">
+</MAPDELETE>
+</MAP>
+</SEQUENCE>
+</BRANCH>
+</FLOW>
